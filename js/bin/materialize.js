@@ -2539,8 +2539,9 @@ $(document).ready(function(){
 		    var offset = $(this.hash).offset().top + 1;
 
 //          offset - 200 allows elements near bottom of page to scroll
+//          ME: colocare el offset - 0 hasta tener el alto del menu de navegacion
 			
-	    	$('html, body').animate({ scrollTop: offset - 200 }, {duration: 400, queue: false, easing: 'easeOutCubic'});
+	    	$('html, body').animate({ scrollTop: offset - 0 }, {duration: 400, queue: false, easing: 'easeOutCubic'});
 			
 		  });
 		});

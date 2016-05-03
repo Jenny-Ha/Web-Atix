@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>    
     <title>ATIX</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <!-- Import customizable styles-->
     <link rel="stylesheet" href="css/main.css">                             
 </head>
 <body>
-    <section id="hero">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#hero" class="brand-logo"> 
-                    <img src="" alt="The Team ATix Logo"> 
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+    <section id="hero" class="section scrollspy">
+         <nav class="white" role="navigation">
+            <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo">
+                Logo
+            </a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <ul class="side-nav" id="nav-mobile">
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
             </div>
-            
         </nav>
+       
         <div class="content">
             <h1>The Team Atix Plus</h1>
             <p>Frase cool</p>
@@ -34,99 +41,171 @@
         </div>
     </section>
     
-    <section id="nosotros">
-        <h2>Nosotros</h2>
-        <div class="mision">
-            <h3>Misión</h3>
-            Confiamos en la pasión de nuestro equipo por el desarrollo
-            de productos innovadores para la comunidad.
-        </div>
-        <div class="vision">
-            <h3>Visión</h3>
-            Inspirar a las personas a trabajar por sus sueños
-        </div>
-    </section>
-    
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <ul  class="list-servicios">
-            <li>
-                <i>Icono</i> <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
-            </li>
-            <li>
-                <i>Icono</i> <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
-            </li>
-            <li>
-                <i>Icono</i> <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
-            </li>
-            <li>
-                <i>Icono</i> <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
-            </li>
-            <li>
-                <i>Icono</i> <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
-            </li>
-        </ul>
-    </section>
-    
-    <section id="portafolio">
-        <h2>Portafolio</h2>
-        <div class="galeria">
-            aqui va el plugin para mostrar las imagenes
-        </div>
-    </section>
-    
-    <section id="equipo">
-        <h2>Nuestro Equipo</h2>
-        <div class="equipo-galeria">
-            
-        </div>
-    </section>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-        Aqui el formulario de contacto de eventus
-         <form class="col s12">
+    <section id="nosotros" class="section scrollspy">
+        <div class="container">
+            <h2>Nosotros</h2>
             <div class="row">
-                <div class="input-field col s12">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Nombre</label>
-                </div>
+                <div class="mision col m6">
+                <h3>Misión</h3>
+                Confiamos en la pasión de nuestro equipo por el desarrollo
+                de productos innovadores para la comunidad.
             </div>
+            <div class="vision col m6">
+                <h3>Visión</h3>
+                Inspirar a las personas a trabajar por sus sueños
+            </div>                
+            </div>
+    
+        </div>
+    </section>
+    
+    <section id="servicios" class="section scrollspy">
+        <div class="container">
+            <h2>Servicios</h2>
+            <ul  class="list-servicios row">
+                <li class="col m6 l4">
+                    <i>Icono</i> <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
+                </li>
+                <li class="col m6 l4">
+                    <i>Icono</i> <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
+                </li>
+                <li class="col m6 l4">
+                    <i>Icono</i> <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
+                </li>
+                <li class="col m6 l4">
+                    <i>Icono</i> <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
+                </li>
+                <li class="col m6 l4">
+                    <i>Icono</i> <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis numquam maxime ducimus quaerat voluptate nemo.</p>
+                </li>
+            </ul>    
+        </div>
+        
+    </section>
+    
+    <section id="portafolio" class="section scrollspy">
+        <div class="container">
+            <h2>Portafolio</h2>
+                Aqui va el plugin para mostrar las imagenes.
+                Uso de plugin <b>Masonry</b>.
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+                </div>
+            </div> <!-- fin Grid -->
+        </div> <!-- fin Container -->
+        
+    </section>
+    
+    <section id="equipo" class="section scrollspy">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <p> Información de nuestro equipo:</p>
+            <div class="equipo-galeria">
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto" class="section scrollspy">
+        <div class="container">
+            <h2>Contacto</h2>
+            Aqui el formulario de contacto de eventus
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Nombre</label>
+                    </div>
+                </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Mensaje</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Mensaje</label>
+                    </div>
                 </div>
-            </div>
-            <button
-            <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-                    <i class="material-icons right">send</i>
-                </button>
-            </div>
-         </form>
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                        <i class="material-icons right">send</i>
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
     
     <footer>
-        Informacion de ubicacion, telefono.
-        
+        <div class="container">
+            Informacion de ubicacion, telefono.                        
+        </div>
     </footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    
+    <!-- Script for gallery of Portfolio-->
+    <script src="js/bin/imagesloaded.pkgd.js"></script>
+    <script src="js/bin/masonry.min.js"></script>   
+    
+    <script type="text/javascript" src="js/bin/materialize.js"></script>
     <!-- Customizable file -->
     <script src="js/main.js"></script>
+    
+    <script>
+        /* Funcion para mostrar menu en dispositivos pequeñños */
+        $(".button-collapse").sideNav();
+        /* Funcion para el scroll atraves de la pagina al hacer clic en el item del menu de navegacion */
+        $('.scrollspy').scrollSpy();
+ 
+        /* Funcion de Masonry para crear grids de photografias */
+        // init Masonry
+        var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        columnWidth: '.grid-sizer'
+        });
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+        });  
+
+        
+    </script>
 </body>
 </html>
