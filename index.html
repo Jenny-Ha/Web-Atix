@@ -4,41 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">    
     <title>ATIX</title>
-                                 
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Import customizable styles-->
+    <link rel="stylesheet" href="css/main.css">                             
 </head>
 <body>
     <section id="hero">
         <nav>
-            <div>
-                <img src="" alt="The Team ATix Logo">
+            <div class="nav-wrapper">
+                <a href="#hero" class="brand-logo"> 
+                    <img src="" alt="The Team ATix Logo"> 
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
-            <ul>
-                <li>Nosotros</li>
-                <li>Servicios</li>
-                <li>Portafolio</li>
-                <li>Contacto</li>
-            </ul>
+            
         </nav>
         <div class="content">
             <h1>The Team Atix Plus</h1>
             <p>Frase cool</p>
-            <button>Conocenos</button>
+            <a href="#nosotros" class="waves-effect waves-light btn">Conocenos</a>
         </div>
     </section>
     
     <section id="nosotros">
         <h2>Nosotros</h2>
         <div class="mision">
+            <h3>Misión</h3>
             Confiamos en la pasión de nuestro equipo por el desarrollo
             de productos innovadores para la comunidad.
         </div>
         <div class="vision">
+            <h3>Visión</h3>
             Inspirar a las personas a trabajar por sus sueños
         </div>
     </section>
     
     <section id="servicios">
-        <h2>servicios</h2>
+        <h2>Servicios</h2>
         <ul  class="list-servicios">
             <li>
                 <i>Icono</i> <br>
@@ -78,12 +88,45 @@
     </section>
     
     <section id="contacto">
-        
+        <h2>Contacto</h2>
+        Aqui el formulario de contacto de eventus
+         <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Nombre</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Mensaje</label>
+                </div>
+            </div>
+            <button
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+         </form>
     </section>
     
     <footer>
         Informacion de ubicacion, telefono.
         
     </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <!-- Customizable file -->
+    <script src="js/main.js"></script>
 </body>
 </html>
