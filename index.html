@@ -8,6 +8,8 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!-- Import icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
     <!-- Import customizable styles-->
     <link rel="stylesheet" href="css/main.css">                             
 </head>
@@ -196,13 +198,13 @@
         /* Funcion de Masonry para crear grids de photografias */
         // init Masonry
         var $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        columnWidth: '.grid-sizer'
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
         });
         // layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
-        $grid.masonry();
+            $grid.masonry();
         });  
 
         
