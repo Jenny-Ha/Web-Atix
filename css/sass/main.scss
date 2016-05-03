@@ -1,0 +1,117 @@
+/*
+    Import Materialize Framework
+*/
+//@import "materialize";
+
+//==================== Owner Styles ===================//
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    outline: 1px solid rgba(0, 0, 255, 0.3);
+}
+//====== Utilitarios ======//
+@mixin clearfix() {
+     & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+//========================//
+
+/* Estilos Globales*/
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.7em;
+}
+p {
+    line-height: 2rem;
+}
+
+/* =============================================== */
+/* Estilos para galeria de imagenes de Masonry */
+
+.grid {
+    background: #DDD;
+  /* clear fix */
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+/* =============================================== */
+/* Section Hero */
+section#hero {
+    height: 100vh;
+    nav {
+        position: absolute;
+        a {
+            color: rgba(0, 0, 0, 0.87);
+        }
+        
+    }
+    .content {
+        transform: translate(-50%, -50%); //Cambia el punto de referencia al centro del elemento
+        position: relative;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        p {
+            font-size: 2em;
+        }  
+    }
+    h1{
+        display: none;
+    }
+}
+/* Section nosotros*/
+section#nosotros {
+    .mision,
+    .vision {
+        text-align: center;
+        padding: 15px 20px;
+        
+    }
+}
+/* Section servicios */
+section#servicios {
+    ul {
+        li {
+            text-align: center;
+            padding: 15px 20px;
+        }
+    }
+}
+
+/* Section contacto */
+section#contacto {
+    form {
+        width: 50%;
+        margin: 10px auto;
+    }
+}
