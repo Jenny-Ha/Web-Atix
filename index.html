@@ -8,6 +8,8 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!-- Import Animate.css-->
+    <link rel="stylesheet" href="css/animate.css">
     <!-- Import icons -->
     <link rel="stylesheet" href="css/themify-icons.css">
     <!-- Import customizable styles-->
@@ -48,11 +50,13 @@
             <h2>Nosotros</h2>
             <div class="row">
                 <div class="mision col m6">
+                <i class="ti-hand-open"></i>
                 <h3>Misión</h3>
                 Confiamos en la pasión de nuestro equipo por el desarrollo
                 de productos innovadores para la comunidad.
             </div>
             <div class="vision col m6">
+                <i class="ti-eye"></i>
                 <h3>Visión</h3>
                 Inspirar a las personas a trabajar por sus sueños
             </div>                
@@ -173,9 +177,15 @@
         </div>
     </section>
     
-    <footer>
+    <footer class="section">
         <div class="container">
-            Informacion de ubicacion, telefono.                        
+            <div class="copyright">
+                <img src="" alt="Logo Atix">
+                <p>Todos los derechos reservados. ATIX 2016</p>
+            </div>
+            <div class="redes-sociales">
+                
+            </div>               
         </div>
     </footer>
     <!--Import jQuery before materialize.js-->
@@ -195,7 +205,9 @@
         /* Funcion para el scroll atraves de la pagina al hacer clic en el item del menu de navegacion */
         $('.scrollspy').scrollSpy();
  
-        /* Funcion de Masonry para crear grids de photografias */
+        /* ======================================================= 
+            Funcion de Masonry para crear grids de photografias 
+        ======================================================= */
         // init Masonry
         var $grid = $('.grid').masonry({
             itemSelector: '.grid-item',
@@ -206,7 +218,11 @@
         $grid.imagesLoaded().progress( function() {
             $grid.masonry();
         });  
-
+        
+        /* ======================================================= 
+            Funcion para aparecer y desapararecer elementos
+            haciendo scroll 
+        ======================================================= */
         
     </script>
 </body>

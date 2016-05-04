@@ -17,6 +17,9 @@ h3 {
 p {
   line-height: 2rem; }
 
+.container {
+  max-width: 960px; }
+
 /* =============================================== */
 /* Estilos para galeria de imagenes de Masonry */
 .grid {
@@ -62,6 +65,9 @@ section#nosotros .mision,
 section#nosotros .vision {
   text-align: center;
   padding: 15px 20px; }
+  section#nosotros .mision i,
+  section#nosotros .vision i {
+    font-size: 2rem; }
 
 /* Section servicios */
 section#servicios ul li {
@@ -72,5 +78,9 @@ section#servicios ul li {
 section#contacto form {
   width: 50%;
   margin: 10px auto; }
+
+/* Footer */
+footer {
+  background-color: #0094d0; }
 
 /*# sourceMappingURL=main.css.map */

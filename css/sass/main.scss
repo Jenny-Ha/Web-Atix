@@ -25,6 +25,8 @@
         clear: both;
     }
 }
+//Variables
+$color-cyan: rgb(0, 148, 208);
 //========================//
 
 /* Estilos Globales*/
@@ -36,6 +38,9 @@ h3 {
 }
 p {
     line-height: 2rem;
+}
+.container {
+    max-width: 960px;
 }
 
 /* =============================================== */
@@ -65,6 +70,8 @@ p {
 }
 
 /* =============================================== */
+
+
 /* Section Hero */
 section#hero {
     height: 100vh;
@@ -95,7 +102,9 @@ section#nosotros {
     .vision {
         text-align: center;
         padding: 15px 20px;
-        
+        i {
+            font-size: 2rem;
+        }
     }
 }
 /* Section servicios */
@@ -114,4 +123,9 @@ section#contacto {
         width: 50%;
         margin: 10px auto;
     }
+}
+
+/* Footer */
+footer {
+    background-color: $color-cyan;
 }
