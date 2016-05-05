@@ -1,6 +1,52 @@
 /*
     Import Materialize Framework
 */
+/*
+  Fonts Gotham y Noto
+  For Atix-Website
+*/
+/*============= GOTHAM =============*/
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/GOTHAM-MEDIUM.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/GOTHAM-LIGHT.TTF") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/GOTHAM-BOLD.TTF") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/GOTHAM-BLACK.TTF") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+/*============= NOTO =============*/
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/noto/NotoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/noto/NotoSans-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/noto/NotoSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/noto/NotoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +54,48 @@
   outline: 1px solid rgba(0, 0, 255, 0.3); }
 
 /* Estilos Globales*/
-h2 {
-  font-size: 2em; }
+body {
+  font-family: "Noto"; }
 
-h3 {
-  font-size: 1.7em; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham";
+  text-transform: uppercase; }
 
 p {
   line-height: 2rem; }
 
+img {
+  width: 100%; }
+
+/* Clases Generales */
+.btn {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  line-height: 2.3; }
+  .btn:hover {
+    background-color: #0094d0;
+    border-color: rgba(0, 148, 208, 0.75); }
+
 .container {
   max-width: 960px; }
+
+.row {
+  margin-bottom: 0; }
+
+.section {
+  padding: 0; }
+
+.texto-gr {
+  font-family: "Gotham", "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  line-height: 1.25; }
+
+.text-section {
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  margin-top: 0; }
 
 /* =============================================== */
 /* Estilos para galeria de imagenes de Masonry */
@@ -44,23 +121,50 @@ p {
 /* =============================================== */
 /* Section Hero */
 section#hero {
+  background: url("../img/bg.png") no-repeat;
+  background-size: cover;
   height: 100vh; }
   section#hero nav {
-    position: absolute; }
+    position: absolute;
+    background: transparent; }
     section#hero nav a {
-      color: rgba(0, 0, 0, 0.87); }
+      color: rgba(255, 255, 255, 0.85);
+      text-shadow: 1px 1px 1px #333;
+      text-transform: uppercase;
+      font-weight: bold; }
+      section#hero nav a:hover {
+        color: #ffffff; }
   section#hero .content {
-    transform: translate(-50%, -50%);
-    position: relative;
-    left: 50%;
-    top: 50%;
-    text-align: center; }
+    height: 100%;
+    color: #ffffff; }
+    section#hero .content h1 {
+      display: none; }
     section#hero .content p {
-      font-size: 2em; }
-  section#hero h1 {
-    display: none; }
+      font-family: "Gotham", "Roboto", sans-serif;
+      font-size: 2.25em;
+      position: relative;
+      top: 35%;
+      text-transform: uppercase;
+      line-height: 1.25; }
+    section#hero .content .highlight {
+      background: rgba(0, 148, 208, 0.75); }
+  section#hero .wrapper-btn {
+    position: relative;
+    width: auto;
+    text-align: center;
+    bottom: 10%; }
+    section#hero .wrapper-btn a {
+      color: #ffffff;
+      text-shadow: 1px 1px 1px #333; }
 
 /* Section nosotros*/
+section#nosotros .mision-vision {
+  background-color: #0094d0;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+section#nosotros .mision {
+  border-right: 2px solid #01aef8; }
 section#nosotros .mision,
 section#nosotros .vision {
   text-align: center;
@@ -68,19 +172,88 @@ section#nosotros .vision {
   section#nosotros .mision i,
   section#nosotros .vision i {
     font-size: 2rem; }
+section#nosotros #equipo {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  section#nosotros #equipo .texto-gr {
+    color: #0094d0; }
+  section#nosotros #equipo h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0094d0; }
 
 /* Section servicios */
-section#servicios ul li {
-  text-align: center;
-  padding: 15px 20px; }
+section#servicios {
+  background-color: #f1f1f1;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  section#servicios h3 {
+    font-size: 1.2rem;
+    color: #0094d0;
+    text-transform: uppercase;
+    font-weight: bold; }
+  section#servicios ul li {
+    text-align: center;
+    padding: 15px 20px; }
+
+/* Section Portafolio */
+section#portafolio .introduccion {
+  background-color: #0094d0;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+section#portafolio .container {
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 /* Section contacto */
-section#contacto form {
-  width: 50%;
-  margin: 10px auto; }
+section#contacto {
+  background-color: #001928;
+  color: #ffffff; }
+  section#contacto form {
+    margin: 10px auto; }
+    section#contacto form .input-field {
+      padding: 0;
+      margin: 0; }
+    section#contacto form input,
+    section#contacto form textarea {
+      background: #fff;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      border: none;
+      border-radius: 4px;
+      padding-right: 10px;
+      padding-left: 10px;
+      color: #a5a5a5; }
+    section#contacto form input {
+      height: 36px; }
+    section#contacto form textarea {
+      height: 120px !important;
+      padding: 10px;
+      overflow-y: auto !important; }
 
 /* Footer */
 footer {
-  background-color: #0094d0; }
+  background-color: #0094d0;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  footer .copyright {
+    font-size: 0.85rem; }
+    footer .copyright img,
+    footer .copyright p {
+      float: left;
+      margin-right: 5px; }
+  footer .redes-sociales {
+    text-align: right; }
+    footer .redes-sociales span {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.75;
+      margin-left: 5px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,7 @@
     Import Materialize Framework
 */
 //@import "materialize";
+@import "components/fonts";
 
 //==================== Owner Styles ===================//
 * {
@@ -25,22 +26,69 @@
         clear: both;
     }
 }
+@mixin pdb-50() {
+    padding-bottom: 50px;
+}
+@mixin pdt-50() {
+    padding-top: 50px;
+}
 //Variables
 $color-cyan: rgb(0, 148, 208);
+$color-linea-cyan: rgb(1, 174, 248);
+$color-a-hover: rgba(0,148,208,0.75);
+$color-blanco-foo: rgba(255, 255, 255, .8);
+$color-azul-osc: #001928;
+$color-bg-gris: rgb(241, 241, 241);
+$color-blanco: #ffffff;
+$color-text-gris: #a5a5a5;
+$color-text-nav: rgba(255, 255, 255, 0.85);
 //========================//
 
 /* Estilos Globales*/
-h2 {
-    font-size: 2em;
+body {
+    font-family: "Noto";
 }
-h3 {
-    font-size: 1.7em;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gotham";
+    text-transform: uppercase;
 }
 p {
     line-height: 2rem;
 }
+img {
+    width: 100%;
+}
+
+/* Clases Generales */
+.btn {
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    line-height: 2.3;
+    &:hover {
+        background-color: $color-cyan;
+        border-color: $color-a-hover;
+    }
+}
 .container {
     max-width: 960px;
+}
+.row {
+    margin-bottom: 0;
+}
+.section {
+    padding: 0;
+}
+.texto-gr {
+    font-family: "Gotham", "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+.text-section {
+    font-size: 1.35rem;
+    text-transform: uppercase;  
+    margin-top: 0; 
 }
 
 /* =============================================== */
@@ -74,30 +122,69 @@ p {
 
 /* Section Hero */
 section#hero {
+    background: url("../img/bg.png") no-repeat;
+    background-size: cover;
     height: 100vh;
     nav {
         position: absolute;
+        background: transparent;
         a {
-            color: rgba(0, 0, 0, 0.87);
+            color: $color-text-nav;
+            text-shadow: 1px 1px 1px #333;
+            text-transform: uppercase;
+            font-weight: bold; 
+            &:hover {
+                color: $color-blanco;
+            }
         }
         
     }
     .content {
-        transform: translate(-50%, -50%); //Cambia el punto de referencia al centro del elemento
-        position: relative;
-        left: 50%;
-        top: 50%;
-        text-align: center;
+        //transform: translate(-50%, -50%); //Cambia el punto de referencia al centro del elemento
+        //position: relative;
+        //left: 50%;
+        //top: 50%;
+        //text-align: center;
+        height: 100%;
+        color: $color-blanco;
+        h1{
+            display: none;
+        }
         p {
-            font-size: 2em;
+            font-family: "Gotham", "Roboto", sans-serif;
+            font-size: 2.25em;
+            position: relative;
+            top: 35%;
+            text-transform: uppercase;
+            line-height: 1.25;
         }  
+        .highlight {
+            background: $color-a-hover;
+        }        
     }
-    h1{
-        display: none;
+     .wrapper-btn {
+        position: relative;
+        width: auto;
+        text-align: center;
+        bottom: 10%;
+        a {
+            color: $color-blanco;
+            text-shadow: 1px 1px 1px #333;
+        }    
     }
 }
 /* Section nosotros*/
 section#nosotros {
+    .mision-vision{
+        background-color: $color-cyan;
+        color: $color-blanco;   
+        @include pdt-50;
+        @include pdb-50;
+         
+    }
+    .mision {
+        border-right: 2px solid $color-linea-cyan;
+    }
     .mision,
     .vision {
         text-align: center;
@@ -106,9 +193,30 @@ section#nosotros {
             font-size: 2rem;
         }
     }
+    #equipo {
+        @include pdt-50;
+        @include pdb-50;
+         .texto-gr {
+             color: $color-cyan;
+         }
+         h5 {
+             font-size: 1.1rem;
+             font-weight: bold;
+             color: $color-cyan;
+         }
+     }
 }
 /* Section servicios */
 section#servicios {
+    background-color: $color-bg-gris;
+    @include pdt-50;
+    @include pdb-50;
+    h3 {
+        font-size: 1.2rem;
+        color: $color-cyan;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
     ul {
         li {
             text-align: center;
@@ -116,16 +224,76 @@ section#servicios {
         }
     }
 }
-
+/* Section Portafolio */
+section#portafolio {
+    .introduccion {
+        background-color: $color-cyan;
+        color: $color-blanco;
+        @include pdt-50;
+        @include pdb-50;
+    }
+    .container {
+        @include pdt-50;
+        @include pdb-50;
+    }
+}
 /* Section contacto */
 section#contacto {
+    background-color: $color-azul-osc;
+    color: $color-blanco;
     form {
-        width: 50%;
         margin: 10px auto;
+        .input-field {
+            padding: 0;
+            margin: 0;
+        }
+        input,
+        textarea {
+            background: #fff;
+            box-sizing: border-box;
+            margin-bottom: 0;
+            border: none;
+            border-radius: 4px;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: $color-text-gris;
+        }
+        input {
+            height: 36px; 
+        }
+        textarea {
+            height: 120px !important;
+            padding: 10px;
+            overflow-y: auto !important; 
+        }
     }
 }
 
 /* Footer */
 footer {
     background-color: $color-cyan;
+    color: $color-blanco-foo ;
+    @include pdt-50;
+    @include pdb-50;
+    .copyright {
+        font-size: 0.85rem;
+        img,
+        p {
+            float: left;
+            margin-right: 5px;
+        }
+    }
+    .redes-sociales {
+        text-align: right;
+        span {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid $color-blanco-foo;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.75;
+            margin-left: 5px;
+        }
+    }
 }
