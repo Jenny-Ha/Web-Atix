@@ -62,17 +62,13 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 p {
-  line-height: 2rem; }
-
-img {
-  width: 100%; }
+  line-height: 1.5; }
 
 /* Clases Generales */
 .btn {
   background-color: transparent;
-  border: 3px solid #fff;
-  border-radius: 5px;
-  line-height: 2.3; }
+  border: 2px solid #fff;
+  border-radius: 5px; }
   .btn:hover {
     background-color: #0094d0;
     border-color: rgba(0, 148, 208, 0.75); }
@@ -89,34 +85,41 @@ img {
 .texto-gr {
   font-family: "Gotham", "Roboto", sans-serif;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 1.25; }
 
 .text-section {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  margin-top: 0; }
+  margin-top: 0;
+  font-weight: bold; }
 
 /* =============================================== */
 /* Estilos para galeria de imagenes de Masonry */
+/*
 .grid {
-  background: #DDD;
-  /* clear fix */ }
-  .grid:after {
-    content: '';
-    display: block;
-    clear: both; }
-
-/* ---- .grid-item ---- */
+    background: #DDD;
+  
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+/* ---- .grid-item ---- 
 .grid-sizer,
 .grid-item {
-  width: 33.333%; }
+    width: 33.333%;
+}
 
 .grid-item {
-  float: left; }
-  .grid-item img {
-    display: block;
-    max-width: 100%; }
+    float: left;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
 
 /* =============================================== */
 /* Section Hero */
@@ -133,7 +136,8 @@ section#hero {
       text-transform: uppercase;
       font-weight: bold; }
       section#hero nav a:hover {
-        color: #ffffff; }
+        color: #ffffff;
+        background: transparent !important; }
   section#hero .content {
     height: 100%;
     color: #ffffff; }
@@ -158,13 +162,34 @@ section#hero {
       text-shadow: 1px 1px 1px #333; }
 
 /* Section nosotros*/
+section#nosotros h3 {
+  font-size: 1.75rem; }
 section#nosotros .mision-vision {
   background-color: #0094d0;
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px; }
+  section#nosotros .mision-vision i {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/assetts/sprite_atix.png");
+    background-repeat: no-repeat; }
 section#nosotros .mision {
-  border-right: 2px solid #01aef8; }
+  position: relative; }
+  section#nosotros .mision::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: -2.5px;
+    width: 5px;
+    height: 70%;
+    background: #01aef8; }
+  section#nosotros .mision i {
+    background-position: 0 0; }
+section#nosotros .vision i {
+  background-position: -44px 1px; }
 section#nosotros .mision,
 section#nosotros .vision {
   text-align: center;
@@ -176,7 +201,8 @@ section#nosotros #equipo {
   padding-top: 50px;
   padding-bottom: 50px; }
   section#nosotros #equipo .texto-gr {
-    color: #0094d0; }
+    color: #0094d0;
+    margin-bottom: 50px; }
   section#nosotros #equipo h5 {
     font-size: 1.1rem;
     font-weight: bold;
@@ -187,14 +213,37 @@ section#servicios {
   background-color: #f1f1f1;
   padding-top: 50px;
   padding-bottom: 50px; }
+  section#servicios .text-section {
+    color: #0094d0; }
   section#servicios h3 {
     font-size: 1.2rem;
     color: #0094d0;
     text-transform: uppercase;
-    font-weight: bold; }
-  section#servicios ul li {
+    font-weight: bold;
+    padding: 0 10px; }
+  section#servicios ul.list-servicios > li {
     text-align: center;
-    padding: 15px 20px; }
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; }
+  section#servicios ul.list-servicios img {
+    width: 100%; }
+  section#servicios ul.descripcion {
+    padding: 0 10px; }
+    section#servicios ul.descripcion > li {
+      padding: 5px 10px 10px 25px;
+      position: relative;
+      text-align: left; }
+      section#servicios ul.descripcion > li::before {
+        font-family: 'icomoon' !important;
+        content: "\e900";
+        position: absolute;
+        left: 3px;
+        top: 8px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        transition: all 0.35s; }
+      section#servicios ul.descripcion > li:hover::before {
+        color: #0094d0; }
 
 /* Section Portafolio */
 section#portafolio .introduccion {
@@ -205,6 +254,15 @@ section#portafolio .introduccion {
 section#portafolio .galeria-trabajos {
   padding-top: 50px;
   padding-bottom: 50px; }
+  section#portafolio .galeria-trabajos .text-section {
+    color: #0094d0;
+    margin-bottom: 50px; }
+  section#portafolio .galeria-trabajos .col {
+    height: 260px;
+    margin: 0.75rem 0; }
+    section#portafolio .galeria-trabajos .col img {
+      width: 100%;
+      height: 100%; }
 
 /* Section contacto */
 section#contacto {
@@ -212,6 +270,15 @@ section#contacto {
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px; }
+  section#contacto .texto-gr::after {
+    content: " ";
+    display: block;
+    background: #0094D0;
+    width: 20%;
+    max-width: 90px;
+    height: 5px; }
+  section#contacto .text-sm {
+    font-size: 0.9rem; }
   section#contacto form {
     margin: 10px auto; }
     section#contacto form .input-field {
@@ -221,42 +288,53 @@ section#contacto {
     section#contacto form textarea {
       background: #fff;
       box-sizing: border-box;
-      margin-bottom: 0;
       border: none;
       border-radius: 4px;
       padding-right: 10px;
       padding-left: 10px;
       color: #a5a5a5; }
     section#contacto form input {
-      height: 36px; }
+      height: 42px; }
     section#contacto form textarea {
-      height: 120px !important;
+      height: 140px !important;
       padding: 10px;
       overflow-y: auto !important; }
+    section#contacto form button {
+      width: 160px; }
 
 /* Footer */
 footer {
   background-color: #0094d0;
   color: rgba(255, 255, 255, 0.8); }
-  footer > .container {
-    padding-top: 50px;
-    padding-bottom: 50px; }
   footer .copyright {
-    font-size: 0.85rem; }
+    font-size: 0.85rem;
+    margin-top: 25px; }
     footer .copyright img,
     footer .copyright p {
-      float: left;
       margin-right: 5px; }
   footer .redes-sociales {
-    text-align: right; }
+    text-align: right;
+    margin-top: 25px; }
     footer .redes-sociales span {
       display: inline-block;
-      width: 25px;
-      height: 25px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
+      width: 32px;
+      height: 32px;
       text-align: center;
       line-height: 1.75;
-      margin-left: 5px; }
+      margin-left: 5px;
+      background-image: url("../img/assetts/sprite_atix.png");
+      background-repeat: no-repeat; }
+      footer .redes-sociales span.instagram {
+        background-position: 0 -44px; }
+        footer .redes-sociales span.instagram:hover {
+          background-position: -32px -44px; }
+      footer .redes-sociales span.twitter {
+        background-position: -64px -44px; }
+        footer .redes-sociales span.twitter:hover {
+          background-position: -96px -44px; }
+      footer .redes-sociales span.facebook {
+        background-position: -129px -44px; }
+        footer .redes-sociales span.facebook:hover {
+          background-position: -161px -44px; }
 
 /*# sourceMappingURL=main.css.map */

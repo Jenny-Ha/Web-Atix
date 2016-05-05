@@ -53,18 +53,14 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 p {
-    line-height: 2rem;
-}
-img {
-    width: 100%;
+    line-height: 1.5;
 }
 
 /* Clases Generales */
 .btn {
     background-color: transparent;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-radius: 5px;
-    line-height: 2.3;
     &:hover {
         background-color: $color-cyan;
         border-color: $color-a-hover;
@@ -82,28 +78,30 @@ img {
 .texto-gr {
     font-family: "Gotham", "Roboto", sans-serif;
     text-transform: uppercase;
-    font-size: 1.75rem;
+    font-size: 2rem;
+    font-weight: 700;
     line-height: 1.25;
 }
 .text-section {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     text-transform: uppercase;  
     margin-top: 0; 
+    font-weight: bold;
 }
 
 /* =============================================== */
 /* Estilos para galeria de imagenes de Masonry */
-
+/*
 .grid {
     background: #DDD;
-  /* clear fix */
+  
     &:after {
         content: '';
         display: block;
         clear: both;
     }
 }
-/* ---- .grid-item ---- */
+/* ---- .grid-item ---- 
 .grid-sizer,
 .grid-item {
     width: 33.333%;
@@ -135,6 +133,7 @@ section#hero {
             font-weight: bold; 
             &:hover {
                 color: $color-blanco;
+                background: transparent !important;
             }
         }
         
@@ -175,15 +174,43 @@ section#hero {
 }
 /* Section nosotros*/
 section#nosotros {
+    h3 {
+        font-size: 1.75rem;
+    }
     .mision-vision{
         background-color: $color-cyan;
         color: $color-blanco;   
         @include pdt-50;
         @include pdb-50;
-         
+        
+        i {
+           display: inline-block; 
+           width: 44px;
+           height: 44px;
+           background-image: url("../img/assetts/sprite_atix.png");
+           background-repeat: no-repeat;
+       } 
     }
     .mision {
-        border-right: 2px solid $color-linea-cyan;
+       position: relative;
+       &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 5%;
+            right: -2.5px;
+            width: 5px;
+            height: 70%;
+            background: #01aef8;
+       }
+       i {
+            background-position: 0 0;
+       }
+    }
+    .vision {
+        i {
+           background-position: -44px 1px;
+        }
     }
     .mision,
     .vision {
@@ -198,6 +225,7 @@ section#nosotros {
         @include pdb-50;
          .texto-gr {
              color: $color-cyan;
+             margin-bottom: 50px;
          }
          h5 {
              font-size: 1.1rem;
@@ -211,16 +239,48 @@ section#servicios {
     background-color: $color-bg-gris;
     @include pdt-50;
     @include pdb-50;
+    .text-section {
+        color: $color-cyan;
+    }
     h3 {
         font-size: 1.2rem;
         color: $color-cyan;
         text-transform: uppercase;
         font-weight: bold;
+        padding: 0 10px; // alineado con ul.description
     }
-    ul {
-        li {
+    ul.list-servicios {
+        > li {
             text-align: center;
-            padding: 15px 20px;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            //padding: 15px 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    ul.descripcion {
+        padding: 0 10px; // alineado con h3
+        > li {
+            padding: 5px 10px 10px 25px;
+            position: relative;
+            text-align: left;   
+            &::before {
+                font-family: 'icomoon' !important;
+                content: "\e900";
+                position: absolute;
+                left: 3px;
+                top: 8px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                transition: all 0.35s;
+            }
+            &:hover {
+                &::before {
+                    color: $color-cyan;
+                }
+            }
         }
     }
 }
@@ -235,6 +295,18 @@ section#portafolio {
     .galeria-trabajos {
         @include pdt-50;
         @include pdb-50;
+        .text-section {
+            color: $color-cyan;
+            margin-bottom: 50px;
+        }
+        .col {
+            height: 260px;
+            margin: 0.75rem 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        } 
     }
 }
 /* Section contacto */
@@ -243,6 +315,19 @@ section#contacto {
     color: $color-blanco;
     @include pdt-50;
     @include pdb-50;
+    .texto-gr {
+        &::after {
+            content: " ";
+            display: block;
+            background: #0094D0;
+            width: 20%;
+            max-width: 90px;
+            height: 5px;
+        }
+    }
+    .text-sm {
+        font-size: 0.9rem;
+    }
     form {
         margin: 10px auto;
         .input-field {
@@ -253,7 +338,6 @@ section#contacto {
         textarea {
             background: #fff;
             box-sizing: border-box;
-            margin-bottom: 0;
             border: none;
             border-radius: 4px;
             padding-right: 10px;
@@ -261,12 +345,15 @@ section#contacto {
             color: $color-text-gris;
         }
         input {
-            height: 36px; 
+            height: 42px; 
         }
         textarea {
-            height: 120px !important;
+            height: 140px !important;
             padding: 10px;
             overflow-y: auto !important; 
+        }
+        button {
+            width: 160px;
         }
     }
 }
@@ -275,29 +362,48 @@ section#contacto {
 footer {
     background-color: $color-cyan;
     color: $color-blanco-foo ;
-    > .container {
-        @include pdt-50;
-        @include pdb-50;
-    }
     .copyright {
         font-size: 0.85rem;
+        margin-top: 25px;
         img,
         p {
-            float: left;
+            
             margin-right: 5px;
         }
     }
     .redes-sociales {
         text-align: right;
+        margin-top: 25px;
         span {
             display: inline-block;
-            width: 25px;
-            height: 25px;
-            border: 1px solid $color-blanco-foo;
-            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            //border: 1px solid $color-blanco-foo;
+            //border-radius: 50%;
             text-align: center;
             line-height: 1.75;
             margin-left: 5px;
+            background-image: url("../img/assetts/sprite_atix.png");
+            background-repeat: no-repeat;
+            //transition: all 0.35s ease-in-out;
+            &.instagram {
+                background-position: 0 -44px;
+                &:hover{
+                   background-position: -32px -44px; 
+                }
+            }
+            &.twitter {
+                background-position: -64px -44px;
+                &:hover {
+                    background-position: -96px -44px;
+                }
+            }
+            &.facebook {
+                background-position: -129px -44px;
+                &:hover{
+                    background-position: -161px -44px;
+                }
+            }
         }
     }
 }
