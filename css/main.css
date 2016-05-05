@@ -202,14 +202,16 @@ section#portafolio .introduccion {
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px; }
-section#portafolio .container {
+section#portafolio .galeria-trabajos {
   padding-top: 50px;
   padding-bottom: 50px; }
 
 /* Section contacto */
 section#contacto {
   background-color: #001928;
-  color: #ffffff; }
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px; }
   section#contacto form {
     margin: 10px auto; }
     section#contacto form .input-field {
@@ -235,9 +237,10 @@ section#contacto {
 /* Footer */
 footer {
   background-color: #0094d0;
-  color: rgba(255, 255, 255, 0.8);
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  color: rgba(255, 255, 255, 0.8); }
+  footer > .container {
+    padding-top: 50px;
+    padding-bottom: 50px; }
   footer .copyright {
     font-size: 0.85rem; }
     footer .copyright img,

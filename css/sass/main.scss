@@ -232,7 +232,7 @@ section#portafolio {
         @include pdt-50;
         @include pdb-50;
     }
-    .container {
+    .galeria-trabajos {
         @include pdt-50;
         @include pdb-50;
     }
@@ -241,6 +241,8 @@ section#portafolio {
 section#contacto {
     background-color: $color-azul-osc;
     color: $color-blanco;
+    @include pdt-50;
+    @include pdb-50;
     form {
         margin: 10px auto;
         .input-field {
@@ -273,8 +275,10 @@ section#contacto {
 footer {
     background-color: $color-cyan;
     color: $color-blanco-foo ;
-    @include pdt-50;
-    @include pdb-50;
+    > .container {
+        @include pdt-50;
+        @include pdb-50;
+    }
     .copyright {
         font-size: 0.85rem;
         img,
