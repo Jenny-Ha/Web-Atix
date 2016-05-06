@@ -352,12 +352,35 @@ footer {
    ========================================================================== */
 /* 12. Grid
    ========================================================================== */
-/* MEDIA QUERIES
+/* RESPONSIVE BEHAVIOR
    ========================================================================== */
-/* For Small devbices (<= 600)*/
+/* New media queries*/
+/* For small-plus devices (<= 800) */
+@media screen and (max-width: 800px) {
+  section#contacto .row > div {
+    width: 100%; }
+  section#contacto .hide-on-small-only {
+    display: none; }
+  section#contacto .hide-on-med-and-up {
+    display: block !important; }
+  section#contacto form {
+    margin-bottom: 25px;
+    /*
+    .right-align {
+        text-align: center;
+    }
+    */ }
+    section#contacto form button {
+      width: 40%;
+      min-width: 160px; } }
+/* For Small devices (<= 600)*/
 @media screen and (max-width: 600px) {
   footer .copyright,
   footer .redes-sociales {
+    text-align: center; } }
+/* For X-Small devices (<= 600)*/
+@media screen and (max-width: 480px) {
+  section#contacto form .right-align {
     text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */

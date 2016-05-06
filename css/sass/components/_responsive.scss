@@ -31,11 +31,41 @@ $gutter-width: 1.5rem !default;
 $element-top-margin: $gutter-width/3 !default;
 $element-bottom-margin: ($gutter-width*2)/3 !default;
 
-/* MEDIA QUERIES
+/* RESPONSIVE BEHAVIOR
    ========================================================================== */
+/* New media queries*/
+$small-plus-screen: 800px !default;
+$extra-small-screen: 480px;
 
-/* For Small devbices (<= 600)*/
+/* For small-plus devices (<= 800) */
+@media screen and (max-width: $small-plus-screen) {
+    section#contacto {
+        .row >div {
+            width:100%;
+        }
+        .hide-on-small-only {
+            display: none;
+        }
+        .hide-on-med-and-up {
+            display: block !important;
+        }
+       form {
+           margin-bottom: 25px;
+           button {
+               width: 40%;
+               min-width: 160px
+           }
+           /*
+           .right-align {
+               text-align: center;
+           }
+           */
+       } 
+    }
+}
+/* For Small devices (<= 600)*/
 @media screen and (max-width: $small-screen) {
+    
     footer {
         .copyright,
         .redes-sociales {
@@ -43,3 +73,14 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
         }
     }
   }
+
+/* For X-Small devices (<= 600)*/
+@media screen and (max-width: $extra-small-screen) {
+    section#contacto {
+        form {
+            .right-align {
+                text-align: center;
+            }
+        }
+    }
+}
