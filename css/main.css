@@ -305,23 +305,26 @@ section#contacto {
 /* Footer */
 footer {
   background-color: #0094d0;
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.8);
+  padding: 25px 0 !important; }
   footer .copyright {
     font-size: 0.85rem;
-    margin-top: 25px; }
-    footer .copyright img,
-    footer .copyright p {
-      margin-right: 5px; }
+    display: table; }
+    footer .copyright span {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      margin-left: 10px; }
   footer .redes-sociales {
     text-align: right;
-    margin-top: 25px; }
+    margin-top: 10px; }
     footer .redes-sociales span {
       display: inline-block;
       width: 32px;
       height: 32px;
       text-align: center;
       line-height: 1.75;
-      margin-left: 5px;
+      margin-left: 10px;
       background-image: url("../img/assetts/sprite_atix.png");
       background-repeat: no-repeat; }
       footer .redes-sociales span.instagram {
@@ -335,6 +338,26 @@ footer {
       footer .redes-sociales span.facebook {
         background-position: -129px -44px; }
         footer .redes-sociales span.facebook:hover {
-          background-position: -161px -44px; }
+          background-position: -160px -44px; }
+
+/* RESPONSIVE BEHAVIOR*/
+/* ==========================================================================
+   Responsive CSS
+   ========================================================================== */
+/**
+ 
+
+
+/* 11. Global
+   ========================================================================== */
+/* 12. Grid
+   ========================================================================== */
+/* MEDIA QUERIES
+   ========================================================================== */
+/* For Small devbices (<= 600)*/
+@media screen and (max-width: 600px) {
+  footer .copyright,
+  footer .redes-sociales {
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
