@@ -39,6 +39,15 @@ $extra-small-screen: 480px;
 
 /* For small-plus devices (<= 800) */
 @media screen and (max-width: $small-plus-screen) {
+    section#nosotros {
+        #equipo{ 
+            .galeria{ 
+                li {
+                    width: 25%;
+                }
+            }
+        }
+    }
     section#contacto {
         .row >div {
             width:100%;
@@ -65,7 +74,24 @@ $extra-small-screen: 480px;
 }
 /* For Small devices (<= 600)*/
 @media screen and (max-width: $small-screen) {
-    
+    section#nosotros {
+        .mision {
+            padding-bottom: 30px !important;
+            &::before {
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 5px;
+            }
+        }
+        #equipo{ 
+            .galeria{ 
+                li {
+                    width: 33.333%;
+                }
+            }
+        }
+    }
     footer {
         .copyright,
         .redes-sociales {
@@ -74,8 +100,17 @@ $extra-small-screen: 480px;
     }
   }
 
-/* For X-Small devices (<= 600)*/
+/* For X-Small devices (<= 480)*/
 @media screen and (max-width: $extra-small-screen) {
+    section#nosotros {
+        #equipo{ 
+            .galeria{ 
+                li {
+                    width: 50%;
+                }
+            }
+        }
+    }
     section#contacto {
         form {
             .right-align {

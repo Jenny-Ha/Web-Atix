@@ -47,6 +47,7 @@ $color-text-nav: rgba(255, 255, 255, 0.85);
 /* Estilos Globales*/
 body {
     font-family: "Noto";
+    color: #757575;//#a3a3a3;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Gotham";
@@ -78,12 +79,12 @@ p {
 .texto-gr {
     font-family: "Gotham", "Roboto", sans-serif;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 700;
     line-height: 1.25;
 }
 .text-section {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;  
     margin-top: 0; 
     font-weight: bold;
@@ -175,7 +176,7 @@ section#hero {
 /* Section nosotros*/
 section#nosotros {
     h3 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     .mision-vision{
         background-color: $color-cyan;
@@ -222,7 +223,7 @@ section#nosotros {
     }
     #equipo {
         @include pdt-50;
-        @include pdb-50;
+        padding-bottom: 20px;
          .texto-gr {
              color: $color-cyan;
              margin-bottom: 50px;
@@ -231,6 +232,33 @@ section#nosotros {
              font-size: 1.1rem;
              font-weight: bold;
              color: $color-cyan;
+         }
+         .galeria {
+             @include clearfix;
+             li {
+                 float: left;
+                 width: 20%;
+                 //min-width: 150px;
+                 text-align: center;
+                 margin-bottom: 30px;
+                 &.persona-new {
+                    .wrap-image {
+                        background: $color-cyan;   
+                    }
+                }
+             }
+             .wrap-image{
+                 width: 100px;
+                 height: 100px;
+                 border-radius: 50%;
+                 overflow: hidden;
+                 margin: 0 auto 10px;
+             }
+             img {
+                 width: 100%;
+                 height: 100%;                 
+             }
+             
          }
      }
 }
@@ -258,6 +286,7 @@ section#servicios {
         }
         img {
             width: 100%;
+            max-width: 245px;
         }
     }
     ul.descripcion {
@@ -266,12 +295,13 @@ section#servicios {
             padding: 5px 10px 10px 25px;
             position: relative;
             text-align: left;   
+            font-size: 0.85rem;
             &::before {
                 font-family: 'icomoon' !important;
                 content: "\e900";
                 position: absolute;
                 left: 3px;
-                top: 8px;
+                top: 5px;
                 font-size: 0.8rem;
                 font-weight: bold;
                 transition: all 0.35s;
@@ -302,11 +332,81 @@ section#portafolio {
         .col {
             height: 260px;
             margin: 0.75rem 0;
-            img {
-                width: 100%;
-                height: 100%;
-            }
         } 
+    }
+    .grid-item {
+        overflow: hidden;
+        height: 100%;
+    }
+    [class^="view-img"] {
+         position: relative;
+         height: 100%;
+         overflow: hidden;
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,148,208,0.75);
+            z-index: 2;
+            transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);  
+        }
+        
+         &:hover {
+            &::before {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            > img:first-child {
+                transform: scale(1.05);
+            }
+        }
+        > img:first-child {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.15s ease-in-out; //cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .logo-cliente {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            z-index: 3;         
+        }
+        span {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: white;
+            display: inline-block;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 3;
+            
+        }
+    }
+    .view-img-01::before {
+        background-color: rgba(222, 15, 24, 0.75);
+    }
+    .view-img-02::before {
+        background-color: rgba(0, 153, 197, 0.75);
+    }
+    .view-img-03::before {
+        background-color: rgba(0, 125, 218, 0.75);
+    }
+    .view-img-04::before {
+        background-color: rgba(1, 218, 1, 0.75);
+    }
+    .view-img-05::before {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+    .view-img-06::before {
+        background-color: rgba(3, 2, 0, 0.75);
     }
 }
 /* Section contacto */
@@ -326,7 +426,7 @@ section#contacto {
         }
     }
     .text-sm {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     form {
         margin: 10px auto;
@@ -364,7 +464,7 @@ footer {
     color: $color-blanco-foo ;
     padding: 25px 0 !important;
     .copyright {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         display: table;
         span {
             display: inline-block;

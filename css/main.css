@@ -55,7 +55,8 @@
 
 /* Estilos Globales*/
 body {
-  font-family: "Noto"; }
+  font-family: "Noto";
+  color: #757575; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Gotham";
@@ -85,12 +86,12 @@ p {
 .texto-gr {
   font-family: "Gotham", "Roboto", sans-serif;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.25; }
 
 .text-section {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-top: 0;
   font-weight: bold; }
@@ -163,7 +164,7 @@ section#hero {
 
 /* Section nosotros*/
 section#nosotros h3 {
-  font-size: 1.75rem; }
+  font-size: 1.5rem; }
 section#nosotros .mision-vision {
   background-color: #0094d0;
   color: #ffffff;
@@ -199,7 +200,7 @@ section#nosotros .vision {
     font-size: 2rem; }
 section#nosotros #equipo {
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 20px; }
   section#nosotros #equipo .texto-gr {
     color: #0094d0;
     margin-bottom: 50px; }
@@ -207,6 +208,29 @@ section#nosotros #equipo {
     font-size: 1.1rem;
     font-weight: bold;
     color: #0094d0; }
+  section#nosotros #equipo .galeria {
+    *zoom: 1; }
+  section#nosotros #equipo .galeria:before, section#nosotros #equipo .galeria:after {
+    content: "";
+    display: table; }
+  section#nosotros #equipo .galeria:after {
+    clear: both; }
+  section#nosotros #equipo .galeria li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 30px; }
+    section#nosotros #equipo .galeria li.persona-new .wrap-image {
+      background: #0094d0; }
+  section#nosotros #equipo .galeria .wrap-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px; }
+  section#nosotros #equipo .galeria img {
+    width: 100%;
+    height: 100%; }
 
 /* Section servicios */
 section#servicios {
@@ -226,19 +250,21 @@ section#servicios {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem; }
   section#servicios ul.list-servicios img {
-    width: 100%; }
+    width: 100%;
+    max-width: 245px; }
   section#servicios ul.descripcion {
     padding: 0 10px; }
     section#servicios ul.descripcion > li {
       padding: 5px 10px 10px 25px;
       position: relative;
-      text-align: left; }
+      text-align: left;
+      font-size: 0.85rem; }
       section#servicios ul.descripcion > li::before {
         font-family: 'icomoon' !important;
         content: "\e900";
         position: absolute;
         left: 3px;
-        top: 8px;
+        top: 5px;
         font-size: 0.8rem;
         font-weight: bold;
         transition: all 0.35s; }
@@ -260,9 +286,62 @@ section#portafolio .galeria-trabajos {
   section#portafolio .galeria-trabajos .col {
     height: 260px;
     margin: 0.75rem 0; }
-    section#portafolio .galeria-trabajos .col img {
-      width: 100%;
-      height: 100%; }
+section#portafolio .grid-item {
+  overflow: hidden;
+  height: 100%; }
+section#portafolio [class^="view-img"] {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+  section#portafolio [class^="view-img"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 148, 208, 0.75);
+    z-index: 2;
+    transition: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  section#portafolio [class^="view-img"]:hover::before {
+    transform: translateX(-100%);
+    opacity: 0; }
+  section#portafolio [class^="view-img"]:hover > img:first-child {
+    transform: scale(1.05); }
+  section#portafolio [class^="view-img"] > img:first-child {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.15s ease-in-out; }
+  section#portafolio [class^="view-img"] .logo-cliente {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 3; }
+  section#portafolio [class^="view-img"] span {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: white;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 3; }
+section#portafolio .view-img-01::before {
+  background-color: rgba(222, 15, 24, 0.75); }
+section#portafolio .view-img-02::before {
+  background-color: rgba(0, 153, 197, 0.75); }
+section#portafolio .view-img-03::before {
+  background-color: rgba(0, 125, 218, 0.75); }
+section#portafolio .view-img-04::before {
+  background-color: rgba(1, 218, 1, 0.75); }
+section#portafolio .view-img-05::before {
+  background-color: rgba(255, 255, 255, 0.75); }
+section#portafolio .view-img-06::before {
+  background-color: rgba(3, 2, 0, 0.75); }
 
 /* Section contacto */
 section#contacto {
@@ -278,7 +357,7 @@ section#contacto {
     max-width: 90px;
     height: 5px; }
   section#contacto .text-sm {
-    font-size: 0.9rem; }
+    font-size: 0.85rem; }
   section#contacto form {
     margin: 10px auto; }
     section#contacto form .input-field {
@@ -308,7 +387,7 @@ footer {
   color: rgba(255, 255, 255, 0.8);
   padding: 25px 0 !important; }
   footer .copyright {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     display: table; }
     footer .copyright span {
       display: inline-block;
@@ -357,6 +436,9 @@ footer {
 /* New media queries*/
 /* For small-plus devices (<= 800) */
 @media screen and (max-width: 800px) {
+  section#nosotros #equipo .galeria li {
+    width: 25%; }
+
   section#contacto .row > div {
     width: 100%; }
   section#contacto .hide-on-small-only {
@@ -375,11 +457,24 @@ footer {
       min-width: 160px; } }
 /* For Small devices (<= 600)*/
 @media screen and (max-width: 600px) {
+  section#nosotros .mision {
+    padding-bottom: 30px !important; }
+    section#nosotros .mision::before {
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 5px; }
+  section#nosotros #equipo .galeria li {
+    width: 33.333%; }
+
   footer .copyright,
   footer .redes-sociales {
     text-align: center; } }
-/* For X-Small devices (<= 600)*/
+/* For X-Small devices (<= 480)*/
 @media screen and (max-width: 480px) {
+  section#nosotros #equipo .galeria li {
+    width: 50%; }
+
   section#contacto form .right-align {
     text-align: center; } }
 
