@@ -140,18 +140,22 @@ section#hero {
     height: 56px;
     z-index: 998;
     position: fixed;
-    background: rgba(255, 255, 255, 0.75);
+    background: #0094d0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   section#hero nav {
     position: absolute;
     background: transparent;
     height: 50px !important;
     box-shadow: none; }
+    section#hero nav .brand-logo img {
+      height: 47px; }
     section#hero nav li {
       height: 50px;
       line-height: 50px; }
     section#hero nav a {
       color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      font-family: Gotham;
       text-shadow: 1px 1px 1px #333;
       text-transform: uppercase;
       font-weight: bold;
@@ -162,8 +166,7 @@ section#hero {
       section#hero nav a.button-collapse i {
         line-height: 50px; }
       section#hero nav a.active {
-        color: #ffffff;
-        border-bottom: 2px solid #0094d0; }
+        color: #ffffff; }
   section#hero .content {
     height: 100%;
     color: #ffffff; }
@@ -171,7 +174,7 @@ section#hero {
       display: none; }
     section#hero .content span {
       font-family: "Gotham", "Roboto", sans-serif;
-      font-size: 2.25rem;
+      font-size: 2.85rem;
       position: relative;
       top: 35%;
       text-transform: uppercase;
@@ -183,7 +186,7 @@ section#hero {
     position: relative;
     width: auto;
     text-align: center;
-    bottom: 10%; }
+    bottom: 80px; }
     section#hero .wrapper-btn a {
       color: #ffffff;
       text-shadow: 1px 1px 1px #333; }

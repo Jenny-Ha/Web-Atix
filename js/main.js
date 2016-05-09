@@ -15,7 +15,7 @@ links.click(function(e)
 /* Para el menu scroll */
 var menu = document.getElementById('wrap_menu');
 var section = document.getElementById('nosotros');
-var altura = section.offsetTop - 50;
+var altura = section.offsetTop - 10;
 console.log(altura);
 
 window.addEventListener('scroll', function (e) {
