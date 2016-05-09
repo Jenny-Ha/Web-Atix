@@ -97,48 +97,56 @@ p {
   font-weight: bold; }
 
 /* =============================================== */
-/* Estilos para galeria de imagenes de Masonry */
-/*
-.grid {
-    background: #DDD;
-  
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-}
-/* ---- .grid-item ---- 
-.grid-sizer,
-.grid-item {
-    width: 33.333%;
-}
+/* Estilos para cursor*/
+.typed-cursor {
+  position: absolute;
+  top: 35%;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
 
-.grid-item {
-    float: left;
-    img {
-        display: block;
-        max-width: 100%;
-    }
-}
-
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /* =============================================== */
 /* Section Hero */
 section#hero {
   background: url("../img/bg.png") no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  /* Fixed menu */ }
   section#hero .navbar-fixed {
     position: fixed;
     width: 100%;
     height: 56px;
-    z-index: 998; }
+    z-index: 998;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   section#hero nav {
     position: absolute;
     background: transparent;
     height: 50px !important;
-    box-shadow: none;
-    /* Fixed menu */ }
+    box-shadow: none; }
     section#hero nav li {
       height: 50px;
       line-height: 50px; }
@@ -156,24 +164,21 @@ section#hero {
       section#hero nav a.active {
         color: #ffffff;
         border-bottom: 2px solid #0094d0; }
-    section#hero nav.fixed {
-      position: fixed;
-      background: rgba(255, 255, 255, 0.75);
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   section#hero .content {
     height: 100%;
     color: #ffffff; }
     section#hero .content h1 {
       display: none; }
-    section#hero .content p {
+    section#hero .content span {
       font-family: "Gotham", "Roboto", sans-serif;
-      font-size: 2.25em;
+      font-size: 2.25rem;
       position: relative;
       top: 35%;
       text-transform: uppercase;
       line-height: 1.25; }
     section#hero .content .highlight {
-      background: rgba(0, 148, 208, 0.75); }
+      background: rgba(0, 148, 208, 0.75);
+      position: static; }
   section#hero .wrapper-btn {
     position: relative;
     width: auto;
@@ -242,7 +247,7 @@ section#nosotros #equipo {
     width: 20%;
     text-align: center;
     margin-bottom: 30px;
-    max-height: 145px;
+    max-height: 144px;
     overflow: hidden; }
     section#nosotros #equipo .galeria li.persona-new .wrap-image {
       background: #0094d0; }
@@ -250,6 +255,7 @@ section#nosotros #equipo {
       width: auto;
       height: auto; }
   section#nosotros #equipo .galeria .wrap-image {
+    display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -496,6 +502,10 @@ footer {
 /* RESPONSIVE BEHAVIOR
    ========================================================================== */
 /* New media queries*/
+/* For small-plus devices (<= 992) */
+@media screen and (max-width: 992px) {
+  section#servicios ul.descripcion {
+    padding: 0 15%; } }
 /* For small-plus devices (<= 800) */
 @media screen and (max-width: 800px) {
   section#nosotros #equipo .galeria li {

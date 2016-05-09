@@ -36,6 +36,14 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 /* New media queries*/
 $small-plus-screen: 800px !default;
 $extra-small-screen: 480px;
+/* For small-plus devices (<= 992) */
+@media screen and (max-width: 992px) {
+    section#servicios{
+      ul.descripcion {
+        padding: 0 15%;
+      }     
+    } 
+}
 
 /* For small-plus devices (<= 800) */
 @media screen and (max-width: $small-plus-screen) {
