@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     Import Materialize Framework
 */
@@ -74,9 +75,6 @@ p {
     background-color: #0094d0;
     border-color: rgba(0, 148, 208, 0.75); }
 
-.container {
-  max-width: 960px; }
-
 .row {
   margin-bottom: 0; }
 
@@ -99,6 +97,7 @@ p {
 /* =============================================== */
 /* Estilos para cursor*/
 .typed-cursor {
+  color: #0094d0;
   position: absolute;
   top: 35%;
   opacity: 1;
@@ -134,24 +133,32 @@ section#hero {
   background-size: cover;
   height: 100vh;
   /* Fixed menu */ }
+  section#hero #wrap_menu {
+    padding-top: 20px; }
   section#hero .navbar-fixed {
     position: fixed;
+    padding-top: 0 !important;
     width: 100%;
     height: 56px;
     z-index: 998;
     position: fixed;
     background: #0094d0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+    section#hero .navbar-fixed .brand-logo img {
+      height: 40px;
+      margin-top: 6px; }
   section#hero nav {
     position: absolute;
     background: transparent;
     height: 50px !important;
-    box-shadow: none; }
+    box-shadow: none;
+    /* Navegacion latera├▒*/ }
     section#hero nav .brand-logo img {
       height: 47px; }
+    section#hero nav .button-collapse {
+      padding-left: 0; }
     section#hero nav li {
-      height: 50px;
-      line-height: 50px; }
+      height: 50px; }
     section#hero nav a {
       color: rgba(255, 255, 255, 0.85);
       font-size: 13px;
@@ -159,13 +166,24 @@ section#hero {
       text-shadow: 1px 1px 1px #333;
       text-transform: uppercase;
       font-weight: bold;
+      padding: 0 25px;
+      height: 50px;
+      line-height: 6;
       /* Item active */ }
       section#hero nav a:hover {
         color: #ffffff;
         background: transparent !important; }
       section#hero nav a.button-collapse i {
-        line-height: 50px; }
+        line-height: 50px;
+        color: #ffffff; }
       section#hero nav a.active {
+        color: #ffffff; }
+    section#hero nav .side-nav a {
+      text-shadow: none;
+      line-height: 4;
+      color: #a5a5a5; }
+      section#hero nav .side-nav a.active {
+        background-color: #0094d0 !important;
         color: #ffffff; }
   section#hero .content {
     height: 100%;
@@ -175,6 +193,7 @@ section#hero {
     section#hero .content span {
       font-family: "Gotham", "Roboto", sans-serif;
       font-size: 2.85rem;
+      font-weight: 600;
       position: relative;
       top: 35%;
       text-transform: uppercase;
@@ -197,7 +216,7 @@ section#nosotros h3 {
 section#nosotros .mision-vision {
   background-color: #0094d0;
   color: #ffffff;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px; }
   section#nosotros .mision-vision i {
     display: inline-block;
@@ -277,7 +296,7 @@ section#nosotros #equipo {
 
 .modal {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: none;
   color: #bfbfbf;
   text-align: center; }
   .modal .modal-close {
@@ -287,8 +306,8 @@ section#nosotros #equipo {
     color: #bfbfbf;
     font-size: 0.9rem; }
   .modal .img-persona {
-    max-width: 150px;
-    min-height: 150px;
+    max-width: 200px;
+    min-height: 200px;
     margin: 0 auto 30px; }
   .modal .cargo {
     font-size: 0.9rem;
@@ -306,7 +325,7 @@ section#nosotros #equipo {
 /* Section servicios */
 section#servicios {
   background-color: #f1f1f1;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px; }
   section#servicios .text-section {
     color: #0094d0; }
@@ -346,8 +365,8 @@ section#servicios {
 section#portafolio .introduccion {
   background-color: #0094d0;
   color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 70px;
+  padding-bottom: 70px; }
 section#portafolio .galeria-trabajos {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -418,7 +437,7 @@ section#portafolio .view-img-06::before {
 section#contacto {
   background-color: #001928;
   color: #ffffff;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px; }
   section#contacto .texto-gr::after {
     content: " ";
@@ -505,12 +524,19 @@ footer {
 /* RESPONSIVE BEHAVIOR
    ========================================================================== */
 /* New media queries*/
+/* For tablets and up */
+@media screen and (min-width: 993px) {
+  .container {
+    min-width: 960px; } }
 /* For small-plus devices (<= 992) */
 @media screen and (max-width: 992px) {
   section#servicios ul.descripcion {
     padding: 0 15%; } }
 /* For small-plus devices (<= 800) */
 @media screen and (max-width: 800px) {
+  section#hero .content span {
+    font-size: 2.5rem; }
+
   section#nosotros #equipo .galeria li {
     width: 25%; }
 
@@ -532,6 +558,9 @@ footer {
       min-width: 160px; } }
 /* For Small devices (<= 600)*/
 @media screen and (max-width: 600px) {
+  section#hero .content span {
+    font-size: 1.75rem; }
+
   section#nosotros .mision {
     padding-bottom: 30px !important; }
     section#nosotros .mision::before {

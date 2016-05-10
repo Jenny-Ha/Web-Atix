@@ -67,9 +67,6 @@ p {
         border-color: $color-a-hover;
     }
 }
-.container {
-    max-width: 960px;
-}
 .row {
     margin-bottom: 0;
 }
@@ -93,6 +90,7 @@ p {
 /* =============================================== */
 /* Estilos para cursor*/
 .typed-cursor{
+   color: $color-cyan;
     position: absolute;
     top: 35%;
     opacity: 1;
@@ -124,15 +122,23 @@ section#hero {
     background: url("../img/bg.png") no-repeat;
     background-size: cover;
     height: 100vh;
+    #wrap_menu {
+        padding-top: 20px;
+    }
     /* Fixed menu */
     .navbar-fixed {
         position: fixed;
+        padding-top: 0 !important;
         width: 100%;
         height: 56px;
         z-index: 998;
         position: fixed;
         background: $color-cyan;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        .brand-logo img {
+            height: 40px;
+            margin-top: 6px;
+        }
     }
     nav {
         position: absolute;
@@ -144,9 +150,12 @@ section#hero {
                 height: 47px;
             }
         }
+        .button-collapse {
+           padding-left: 0;
+        }
         li {
           height: 50px;
-          line-height: 50px;
+          //line-height: 50px;
         }       
         a {
             color: $color-text-nav;
@@ -155,6 +164,9 @@ section#hero {
             text-shadow: 1px 1px 1px #333;
             text-transform: uppercase;
             font-weight: bold; 
+            padding: 0 25px;
+            height: 50px;
+            line-height: 6;
             &:hover {
                 color: $color-blanco;
                 background: transparent !important;
@@ -162,11 +174,25 @@ section#hero {
             &.button-collapse {
               i {
                 line-height: 50px;
+                color: $color-blanco;
               }
             }
             /* Item active */
             &.active {
                color: $color-blanco;
+            }
+        }
+        
+        /* Navegacion laterañ*/
+        .side-nav {
+            a {
+                text-shadow: none;
+                line-height: 4;
+                color: $color-text-gris;
+                &.active {
+                    background-color: $color-cyan !important;
+                    color: $color-blanco;
+                }
             }
         }
     }
@@ -184,6 +210,7 @@ section#hero {
         span {
             font-family: "Gotham", "Roboto", sans-serif;
             font-size: 2.85rem;
+            font-weight: 600;
             position: relative;
             top: 35%;
             text-transform: uppercase;
@@ -213,7 +240,7 @@ section#nosotros {
     .mision-vision{
         background-color: $color-cyan;
         color: $color-blanco;   
-        @include pdt-50;
+        padding-top: 80px;
         @include pdb-50;
         
         i {
@@ -311,7 +338,8 @@ section#nosotros {
 }
 .modal {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+  //border: 1px solid rgba(255, 255, 255, 0.25);
   color: #bfbfbf;
   text-align: center;
   .modal-close {
@@ -322,8 +350,8 @@ section#nosotros {
     font-size: 0.9rem;
   }
   .img-persona {
-    max-width: 150px;
-    min-height: 150px;
+    max-width: 200px;
+    min-height: 200px;
     margin: 0 auto 30px;
   }
   .cargo {
@@ -346,7 +374,7 @@ section#nosotros {
 /* Section servicios */
 section#servicios {
     background-color: $color-bg-gris;
-    @include pdt-50;
+    padding-top: 80px;
     @include pdb-50;
     .text-section {
         color: $color-cyan;
@@ -400,8 +428,8 @@ section#portafolio {
     .introduccion {
         background-color: $color-cyan;
         color: $color-blanco;
-        @include pdt-50;
-        @include pdb-50;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     .galeria-trabajos {
         @include pdt-50;
@@ -494,7 +522,7 @@ section#portafolio {
 section#contacto {
     background-color: $color-azul-osc;
     color: $color-blanco;
-    @include pdt-50;
+    padding-top: 80px;
     @include pdb-50;
     .texto-gr {
         &::after {
