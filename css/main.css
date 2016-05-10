@@ -181,7 +181,7 @@ section#hero {
     section#hero nav .side-nav a {
       text-shadow: none;
       line-height: 4;
-      color: #a5a5a5; }
+      color: #a3a3a3; }
       section#hero nav .side-nav a.active {
         background-color: #0094d0 !important;
         color: #ffffff; }
@@ -287,7 +287,8 @@ section#nosotros #equipo {
     width: 100%;
     height: 100%; }
   section#nosotros #equipo .galeria .cargo {
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    color: #a3a3a3; }
 
 /*MODAL*/
 .lean-overlay {
@@ -461,7 +462,7 @@ section#contacto {
       border-radius: 4px;
       padding-right: 10px;
       padding-left: 10px;
-      color: #a5a5a5; }
+      color: #a3a3a3; }
     section#contacto form input {
       height: 42px; }
     section#contacto form textarea {

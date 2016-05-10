@@ -40,7 +40,7 @@ $color-blanco-foo: rgba(255, 255, 255, .8);
 $color-azul-osc: #001928;
 $color-bg-gris: rgb(241, 241, 241);
 $color-blanco: #ffffff;
-$color-text-gris: #a5a5a5;
+$color-text-gris: #a3a3a3;
 $color-text-nav: rgba(255, 255, 255, 0.85);
 //========================//
 
@@ -327,6 +327,7 @@ section#nosotros {
              }
              .cargo {
                font-size: 0.9rem;
+               color: #a3a3a3;
              }
          }
      }
