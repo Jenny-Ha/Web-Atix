@@ -301,14 +301,15 @@ section#nosotros {
                  //min-width: 150px;
                  text-align: center;
                  margin-bottom: 30px;
-                 max-height: 144px;
+                 height: 165px;
+                 max-height: 165px;
                  overflow: hidden;
                  &.persona-new {
                     .wrap-image {
                         background: $color-cyan;   
                     }
                     img {
-                        width: auto;
+                        width: 100px;
                         height: auto;
                     }
                 }
@@ -327,7 +328,11 @@ section#nosotros {
              }
              .cargo {
                font-size: 0.9rem;
+               line-height: 1.25;
                color: #a3a3a3;
+             }
+             .descripcion {
+                 visibility: hidden;
              }
          }
      }
@@ -343,7 +348,10 @@ section#nosotros {
   //border: 1px solid rgba(255, 255, 255, 0.25);
   color: #bfbfbf;
   text-align: center;
-  .modal-close {
+  br {
+      display: none;
+  }
+  .btn-close {
     position: absolute;
     right: 0;
     top: 0;
@@ -354,6 +362,8 @@ section#nosotros {
     max-width: 200px;
     min-height: 200px;
     margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
   }
   .cargo {
     font-size: 0.9rem;
@@ -370,6 +380,8 @@ section#nosotros {
   }
   .descripcion {
     padding: 1rem 10%;
+    font-size: 12px;
+    font-style: italic;
   }
 }
 /* Section servicios */
@@ -402,7 +414,7 @@ section#servicios {
     ul.descripcion {
         padding: 0 10px; // alineado con h3
         > li {
-            padding: 5px 10px 10px 25px;
+            padding: 5px 10px 5px 20px;
             position: relative;
             text-align: left;   
             font-size: 0.85rem;
@@ -410,10 +422,11 @@ section#servicios {
                 font-family: 'icomoon' !important;
                 content: "\e900";
                 position: absolute;
-                left: 3px;
-                top: 5px;
-                font-size: 0.8rem;
+                left: 5px;
+                top: 10px;
+                font-size: 8px;
                 font-weight: bold;
+                line-height: inherit;
                 transition: all 0.35s;
             }
             &:hover {
