@@ -1,12 +1,114 @@
 @charset "UTF-8";
-/*
-    Import Materialize Framework
-*/
-/*
-  Fonts Gotham y Noto
-  For Atix-Website
-*/
-/*============= GOTHAM =============*/
+/* Loader styles */
+.loader,
+.loader__figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.loader {
+  overflow: visible;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 999; }
+
+.loader__figure {
+  top: 35%;
+  height: 0;
+  width: 0;
+  box-sizing: border-box;
+  border: 0 solid #0094d0;
+  border-radius: 50%;
+  -webkit-animation: loader-figure 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-animation: loader-figure 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: loader-figure 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.loader__label {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: loader-label 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-animation: loader-label 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: loader-label 1.15s infinite cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+@-webkit-keyframes loader-figure {
+  0% {
+    height: 0;
+    width: 0; }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1; }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0; } }
+@-moz-keyframes loader-figure {
+  0% {
+    height: 0;
+    width: 0; }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1; }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0; } }
+@keyframes loader-figure {
+  0% {
+    height: 0;
+    width: 0; }
+  30% {
+    height: 2em;
+    width: 2em;
+    border-width: 1em;
+    opacity: 1; }
+  100% {
+    height: 2em;
+    width: 2em;
+    border-width: 0;
+    opacity: 0; } }
+@-webkit-keyframes loader-label {
+  0% {
+    opacity: 0.35; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 0.35; } }
+@-moz-keyframes loader-label {
+  0% {
+    opacity: 0.35; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 0.35; } }
+@keyframes loader-label {
+  0% {
+    opacity: 0.35; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 0.35; } }
+/* Import Fonts*/
+/* GOTHAM */
 @font-face {
   font-family: "Gotham";
   src: url("../fonts/gotham/GOTHAM-MEDIUM.TTF") format("truetype");
@@ -27,7 +129,7 @@
   src: url("../fonts/gotham/GOTHAM-BLACK.TTF") format("truetype");
   font-weight: 900;
   font-style: normal; }
-/*============= NOTO =============*/
+/* NOTO */
 @font-face {
   font-family: "Noto";
   src: url("../fonts/noto/NotoSans-Bold.ttf") format("truetype");
@@ -51,12 +153,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  soutline: 1px solid rgba(0, 0, 255, 0.3); }
 
 /* Estilos Globales*/
 body {
   font-family: "Noto";
-  color: #666; }
+  color: #666;
+  overflow: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Gotham";
@@ -66,6 +170,9 @@ p {
   line-height: 1.5; }
 
 /* Clases Generales */
+.body-visible {
+  overflow: visible !important; }
+
 .btn {
   background-color: transparent;
   border: 2px solid #fff;
@@ -321,8 +428,8 @@ section#nosotros {
     color: #bfbfbf;
     font-size: 0.9rem; }
   .modal .img-persona {
-    max-width: 200px;
-    min-height: 200px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 30px;
     border-radius: 50%;
     overflow: hidden; }
@@ -422,11 +529,12 @@ section#portafolio [class^="view-img"] {
     height: 100%;
     z-index: 1;
     transition: all 0.15s ease-in-out; }
-  section#portafolio [class^="view-img"] .logo-cliente {
+  section#portafolio [class^="view-img"] .logo-org {
     position: absolute;
     bottom: 25px;
     left: 25px;
-    z-index: 3; }
+    z-index: 3;
+    height: 35px; }
   section#portafolio [class^="view-img"] span {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -552,6 +660,9 @@ footer {
     min-width: 960px; } }
 /* For small-plus devices (<= 992) */
 @media screen and (max-width: 992px) {
+  .modal {
+    width: 90%; }
+
   section#servicios ul.descripcion {
     padding: 0; }
     section#servicios ul.descripcion li {
@@ -605,6 +716,13 @@ footer {
     width: 50%; }
 
   section#contacto form .right-align {
-    text-align: center; } }
+    text-align: center; }
+
+  .modal .img-persona {
+    width: 150px;
+    height: 150px; }
+
+  footer .copyright img {
+    margin-bottom: 0; } }
 
 /*# sourceMappingURL=main.css.map */

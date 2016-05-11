@@ -1,7 +1,7 @@
-/*
-    Import Materialize Framework
-*/
-//@import "materialize";
+/* Loader styles */
+@import "loader";
+
+/* Import Fonts*/
 @import "components/fonts";
 
 //==================== Owner Styles ===================//
@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     
-    //outline: 1px solid rgba(0, 0, 255, 0.3);
+    soutline: 1px solid rgba(0, 0, 255, 0.3);
 }
 //====== Utilitarios ======//
 @mixin clearfix() {
@@ -49,6 +49,7 @@ $color-text-nav: rgba(255, 255, 255, 0.85);
 body {
     font-family: "Noto";
     color: $color-text-gris;
+    overflow: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Gotham";
@@ -59,6 +60,9 @@ p {
 }
 
 /* Clases Generales */
+.body-visible{
+    overflow: visible !important; // solucion del problema con preloader y modales
+}
 .btn {
     background-color: transparent;
     border: 2px solid #fff;
@@ -368,8 +372,8 @@ section#nosotros {
     font-size: 0.9rem;
   }
   .img-persona {
-    max-width: 200px;
-    min-height: 200px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 30px;
     border-radius: 50%;
     overflow: hidden;
@@ -502,12 +506,14 @@ section#portafolio {
             z-index: 1;
             transition: all 0.15s ease-in-out; //cubic-bezier(0.645, 0.045, 0.355, 1);
         }
-        .logo-cliente {
+        .logo-org {
             position: absolute;
             bottom: 25px;
             left: 25px;
-            z-index: 3;         
+            z-index: 3;
+            height: 35px;         
         }
+        
         span {
             text-transform: uppercase;
             font-size: 0.8rem;

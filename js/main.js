@@ -1,16 +1,4 @@
 'use strict';
-/* Funcion para extrare los valores que seran colocadas 
-    dentro del modal
- */
-
-var links= $('#equipo .modal-trigger');
-links.click(function(e)
-{
-     var padre= $(this).parent().attr('class');
-    console.log(padre)
-    var nueva = $(padre);
-    console.log(nueva);
-}) 
 
 /* Para el menu scroll */
 var menu = document.getElementById('wrap_menu');
@@ -39,3 +27,35 @@ window.addEventListener('scroll', function (e) {
         }
     });    */
 });
+
+
+/* Added a preloader function */
+$(window).load(function() {
+    $('body').addClass('body-visible');
+    $('.loader').fadeOut('slow');
+})  
+
+/* Funcion para mostrar menu en dispositivos pequeñños */
+$(".button-collapse").sideNav();
+/* Funcion para el scroll atraves de la pagina al hacer clic en el item del menu de navegacion */
+$('.scrollspy').scrollSpy();
+/* Modal */
+    $('.modal-trigger').leanModal();
+/* Personalizar los elementos de Tipeo */
+$(function(){
+    $(".type-it").typed({
+        stringsElement: $('#typed-strings'),
+        typeSpeed: 75,
+        loop: true
+    });
+});
+
+/* Funcion para modales */
+var links= $('#equipo .modal-trigger');
+links.click(function(e)
+{
+     var padre= $(this).parent().attr('class');
+    console.log(padre)
+    var nueva = $(padre);
+    console.log(nueva);
+}) 

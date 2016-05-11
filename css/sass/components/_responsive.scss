@@ -45,6 +45,9 @@ $extra-small-screen: 480px;
 
 /* For small-plus devices (<= 992) */
 @media screen and (max-width: $medium-screen) {
+    .modal {
+        width: 90%;
+    }
     section#servicios{
       ul.descripcion {
         padding: 0;
@@ -131,6 +134,7 @@ $extra-small-screen: 480px;
 
 /* For X-Small devices (<= 480)*/
 @media screen and (max-width: $extra-small-screen) {
+ 
     section#nosotros {
         #equipo{ 
             .galeria{ 
@@ -146,5 +150,14 @@ $extra-small-screen: 480px;
                 text-align: center;
             }
         }
+    }
+    .modal {
+        .img-persona {
+            width: 150px;
+            height: 150px;
+        }   
+    }
+    footer .copyright img {
+        margin-bottom: 0;
     }
 }
