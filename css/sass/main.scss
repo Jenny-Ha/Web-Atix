@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     
-    outline: 1px solid rgba(0, 0, 255, 0.3);
+    //outline: 1px solid rgba(0, 0, 255, 0.3);
 }
 //====== Utilitarios ======//
 @mixin clearfix() {
@@ -37,17 +37,18 @@ $color-cyan: rgb(0, 148, 208);
 $color-linea-cyan: rgb(1, 174, 248);
 $color-a-hover: rgba(0,148,208,0.75);
 $color-blanco-foo: rgba(255, 255, 255, .8);
-$color-azul-osc: #001928;
+$color-azul-osc: #021f2c;
 $color-bg-gris: rgb(241, 241, 241);
 $color-blanco: #ffffff;
-$color-text-gris: #a3a3a3;
+$color-text-gris: #666;
+$color-gris-claro: #999999;
 $color-text-nav: rgba(255, 255, 255, 0.85);
 //========================//
 
 /* Estilos Globales*/
 body {
     font-family: "Noto";
-    color: #757575;//#a3a3a3;
+    color: $color-text-gris;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Gotham";
@@ -235,7 +236,7 @@ section#hero {
 /* Section nosotros*/
 section#nosotros {
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
     .mision-vision{
         background-color: $color-cyan;
@@ -250,9 +251,16 @@ section#nosotros {
            background-image: url("../img/assetts/sprite_atix.png");
            background-repeat: no-repeat;
        } 
+       p {
+            line-height: 1.25;
+            font-size: 0.85rem;
+            padding: 0 45px;
+       }
     }
     .mision {
        position: relative;
+       text-align: center;
+       padding: 15px 20px;
        &::before {
             content: "";
             display: block;
@@ -268,18 +276,14 @@ section#nosotros {
        }
     }
     .vision {
+        text-align: center;
+         padding: 15px 20px;
         i {
            background-position: -44px 1px;
         }
     }
-    .mision,
-    .vision {
-        text-align: center;
-        padding: 15px 20px;
-        i {
-            font-size: 2rem;
-        }
-    }
+        
+    /*Seccion Equipo de trbajo*/
     #equipo {
         @include pdt-50;
         padding-bottom: 20px;
@@ -288,10 +292,11 @@ section#nosotros {
              margin-bottom: 50px;
          }
          h5 {
-             font-size: 1rem;
+             font-size: 0.9rem;
              font-weight: bold;
+             text-transform: capitalize;
              color: $color-cyan;
-             margin-bottom: 0;
+             margin-bottom: 3px;
          }
          .galeria {
              @include clearfix;
@@ -301,8 +306,8 @@ section#nosotros {
                  //min-width: 150px;
                  text-align: center;
                  margin-bottom: 30px;
-                 height: 165px;
-                 max-height: 165px;
+                 height: 160px;
+                 max-height: 160px;
                  overflow: hidden;
                  &.persona-new {
                     .wrap-image {
@@ -327,9 +332,10 @@ section#nosotros {
                  height: 100%;                 
              }
              .cargo {
-               font-size: 0.9rem;
-               line-height: 1.25;
+               font-size: 0.78rem;
+               line-height: 1.5;
                color: #a3a3a3;
+               text-transform: uppercase;
              }
              .descripcion {
                  visibility: hidden;
@@ -348,6 +354,9 @@ section#nosotros {
   //border: 1px solid rgba(255, 255, 255, 0.25);
   color: #bfbfbf;
   text-align: center;
+  top: 5% !important;
+  min-height: 90% !important;
+  overflow: auto;
   br {
       display: none;
   }
@@ -412,7 +421,7 @@ section#servicios {
         }
     }
     ul.descripcion {
-        padding: 0 10px; // alineado con h3
+        //padding: 0 10px; // alineado con h3
         > li {
             padding: 5px 10px 5px 20px;
             position: relative;
@@ -421,6 +430,7 @@ section#servicios {
             &::before {
                 font-family: 'icomoon' !important;
                 content: "\e900";
+                color: $color-cyan;
                 position: absolute;
                 left: 5px;
                 top: 10px;
@@ -566,6 +576,7 @@ section#contacto {
             padding-right: 10px;
             padding-left: 10px;
             color: $color-text-gris;
+            font-size: 0.85rem;
         }
         input {
             height: 42px; 
@@ -585,10 +596,13 @@ section#contacto {
 footer {
     background-color: $color-cyan;
     color: $color-blanco-foo ;
-    padding: 25px 0 !important;
+    padding: 20px 0 !important;
     .copyright {
         font-size: 0.8rem;
         display: table;
+        img {
+            margin-bottom: -5px;
+        }
         span {
             display: inline-block;
             vertical-align: middle;

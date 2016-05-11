@@ -51,13 +51,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  outline: 1px solid rgba(0, 0, 255, 0.3); }
+  box-sizing: border-box; }
 
 /* Estilos Globales*/
 body {
   font-family: "Noto";
-  color: #757575; }
+  color: #666; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Gotham";
@@ -181,7 +180,7 @@ section#hero {
     section#hero nav .side-nav a {
       text-shadow: none;
       line-height: 4;
-      color: #a3a3a3; }
+      color: #666; }
       section#hero nav .side-nav a.active {
         background-color: #0094d0 !important;
         color: #ffffff; }
@@ -211,88 +210,94 @@ section#hero {
       text-shadow: 1px 1px 1px #333; }
 
 /* Section nosotros*/
-section#nosotros h3 {
-  font-size: 1.5rem; }
-section#nosotros .mision-vision {
-  background-color: #0094d0;
-  color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 50px; }
-  section#nosotros .mision-vision i {
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    background-image: url("../img/assetts/sprite_atix.png");
-    background-repeat: no-repeat; }
-section#nosotros .mision {
-  position: relative; }
-  section#nosotros .mision::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: -2.5px;
-    width: 5px;
-    height: 70%;
-    background: #01aef8; }
-  section#nosotros .mision i {
-    background-position: 0 0; }
-section#nosotros .vision i {
-  background-position: -44px 1px; }
-section#nosotros .mision,
-section#nosotros .vision {
-  text-align: center;
-  padding: 15px 20px; }
-  section#nosotros .mision i,
-  section#nosotros .vision i {
-    font-size: 2rem; }
-section#nosotros #equipo {
-  padding-top: 50px;
-  padding-bottom: 20px; }
-  section#nosotros #equipo .texto-gr {
-    color: #0094d0;
-    margin-bottom: 50px; }
-  section#nosotros #equipo h5 {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #0094d0;
-    margin-bottom: 0; }
-  section#nosotros #equipo .galeria {
-    *zoom: 1; }
-  section#nosotros #equipo .galeria:before, section#nosotros #equipo .galeria:after {
-    content: "";
-    display: table; }
-  section#nosotros #equipo .galeria:after {
-    clear: both; }
-  section#nosotros #equipo .galeria li {
-    float: left;
-    width: 20%;
+section#nosotros {
+  /*Seccion Equipo de trbajo*/ }
+  section#nosotros h3 {
+    font-size: 1.45rem; }
+  section#nosotros .mision-vision {
+    background-color: #0094d0;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 50px; }
+    section#nosotros .mision-vision i {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      background-image: url("../img/assetts/sprite_atix.png");
+      background-repeat: no-repeat; }
+    section#nosotros .mision-vision p {
+      line-height: 1.25;
+      font-size: 0.85rem;
+      padding: 0 45px; }
+  section#nosotros .mision {
+    position: relative;
     text-align: center;
-    margin-bottom: 30px;
-    height: 165px;
-    max-height: 165px;
-    overflow: hidden; }
-    section#nosotros #equipo .galeria li.persona-new .wrap-image {
-      background: #0094d0; }
-    section#nosotros #equipo .galeria li.persona-new img {
+    padding: 15px 20px; }
+    section#nosotros .mision::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      right: -2.5px;
+      width: 5px;
+      height: 70%;
+      background: #01aef8; }
+    section#nosotros .mision i {
+      background-position: 0 0; }
+  section#nosotros .vision {
+    text-align: center;
+    padding: 15px 20px; }
+    section#nosotros .vision i {
+      background-position: -44px 1px; }
+  section#nosotros #equipo {
+    padding-top: 50px;
+    padding-bottom: 20px; }
+    section#nosotros #equipo .texto-gr {
+      color: #0094d0;
+      margin-bottom: 50px; }
+    section#nosotros #equipo h5 {
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      color: #0094d0;
+      margin-bottom: 3px; }
+    section#nosotros #equipo .galeria {
+      *zoom: 1; }
+    section#nosotros #equipo .galeria:before, section#nosotros #equipo .galeria:after {
+      content: "";
+      display: table; }
+    section#nosotros #equipo .galeria:after {
+      clear: both; }
+    section#nosotros #equipo .galeria li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      margin-bottom: 30px;
+      height: 160px;
+      max-height: 160px;
+      overflow: hidden; }
+      section#nosotros #equipo .galeria li.persona-new .wrap-image {
+        background: #0094d0; }
+      section#nosotros #equipo .galeria li.persona-new img {
+        width: 100px;
+        height: auto; }
+    section#nosotros #equipo .galeria .wrap-image {
+      display: block;
       width: 100px;
-      height: auto; }
-  section#nosotros #equipo .galeria .wrap-image {
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 10px; }
-  section#nosotros #equipo .galeria img {
-    width: 100%;
-    height: 100%; }
-  section#nosotros #equipo .galeria .cargo {
-    font-size: 0.9rem;
-    line-height: 1.25;
-    color: #a3a3a3; }
-  section#nosotros #equipo .galeria .descripcion {
-    visibility: hidden; }
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 10px; }
+    section#nosotros #equipo .galeria img {
+      width: 100%;
+      height: 100%; }
+    section#nosotros #equipo .galeria .cargo {
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #a3a3a3;
+      text-transform: uppercase; }
+    section#nosotros #equipo .galeria .descripcion {
+      visibility: hidden; }
 
 /*MODAL*/
 .lean-overlay {
@@ -303,7 +308,10 @@ section#nosotros #equipo {
   background: transparent;
   box-shadow: none;
   color: #bfbfbf;
-  text-align: center; }
+  text-align: center;
+  top: 5% !important;
+  min-height: 90% !important;
+  overflow: auto; }
   .modal br {
     display: none; }
   .modal .btn-close {
@@ -353,25 +361,24 @@ section#servicios {
   section#servicios ul.list-servicios img {
     width: 100%;
     max-width: 245px; }
-  section#servicios ul.descripcion {
-    padding: 0 10px; }
-    section#servicios ul.descripcion > li {
-      padding: 5px 10px 5px 20px;
-      position: relative;
-      text-align: left;
-      font-size: 0.85rem; }
-      section#servicios ul.descripcion > li::before {
-        font-family: 'icomoon' !important;
-        content: "\e900";
-        position: absolute;
-        left: 5px;
-        top: 10px;
-        font-size: 8px;
-        font-weight: bold;
-        line-height: inherit;
-        transition: all 0.35s; }
-      section#servicios ul.descripcion > li:hover::before {
-        color: #0094d0; }
+  section#servicios ul.descripcion > li {
+    padding: 5px 10px 5px 20px;
+    position: relative;
+    text-align: left;
+    font-size: 0.85rem; }
+    section#servicios ul.descripcion > li::before {
+      font-family: 'icomoon' !important;
+      content: "\e900";
+      color: #0094d0;
+      position: absolute;
+      left: 5px;
+      top: 10px;
+      font-size: 8px;
+      font-weight: bold;
+      line-height: inherit;
+      transition: all 0.35s; }
+    section#servicios ul.descripcion > li:hover::before {
+      color: #0094d0; }
 
 /* Section Portafolio */
 section#portafolio .introduccion {
@@ -447,7 +454,7 @@ section#portafolio .view-img-06::before {
 
 /* Section contacto */
 section#contacto {
-  background-color: #001928;
+  background-color: #021f2c;
   color: #ffffff;
   padding-top: 80px;
   padding-bottom: 50px; }
@@ -473,7 +480,8 @@ section#contacto {
       border-radius: 4px;
       padding-right: 10px;
       padding-left: 10px;
-      color: #a3a3a3; }
+      color: #666;
+      font-size: 0.85rem; }
     section#contacto form input {
       height: 42px; }
     section#contacto form textarea {
@@ -487,10 +495,12 @@ section#contacto {
 footer {
   background-color: #0094d0;
   color: rgba(255, 255, 255, 0.8);
-  padding: 25px 0 !important; }
+  padding: 20px 0 !important; }
   footer .copyright {
     font-size: 0.8rem;
     display: table; }
+    footer .copyright img {
+      margin-bottom: -5px; }
     footer .copyright span {
       display: inline-block;
       vertical-align: middle;
