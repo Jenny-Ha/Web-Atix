@@ -35,7 +35,7 @@
 //Variables
 $color-cyan: rgb(0, 148, 208);
 $color-linea-cyan: rgb(1, 174, 248);
-$color-a-hover: rgba(0,148,208,0.75);
+$color-a-hover: rgba(0,148,208,0.85);
 $color-blanco-foo: rgba(255, 255, 255, .8);
 $color-azul-osc: #021f2c;
 $color-bg-gris: rgb(241, 241, 241);
@@ -124,8 +124,9 @@ p {
 
 /* Section Hero */
 section#hero {
-    background: url("../img/bg.png") no-repeat;
+    background: url("../img/bg.jpg") no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
     height: 100vh;
     #wrap_menu {
         padding-top: 20px;
