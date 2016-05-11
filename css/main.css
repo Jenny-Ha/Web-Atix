@@ -445,8 +445,11 @@ section#nosotros {
     font-weight: 400; }
   .modal .descripcion {
     padding: 1rem 10%;
-    font-size: 1rem;
+    font-size: 14px;
     font-style: italic; }
+
+#modal-13 br {
+  display: block; }
 
 /* Section servicios */
 section#servicios {

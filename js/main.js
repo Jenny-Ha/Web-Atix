@@ -31,7 +31,7 @@ window.addEventListener('scroll', function (e) {
 
 /* Added a preloader function */
 $(window).load(function() {
-    $('body').addClass('body-visible');
+    $('body').addClass('body-visible').fadeIn('slow');
     $('.loader').fadeOut('slow');
 })  
 
