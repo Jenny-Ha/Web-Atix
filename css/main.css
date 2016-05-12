@@ -177,7 +177,7 @@ p {
   border: 2px solid #fff;
   border-radius: 5px; }
   .btn:hover {
-    background-color: #0094d0;
+    background-color: rgba(0, 148, 208, 0.85);
     border-color: rgba(0, 148, 208, 0.85); }
 
 .row {
@@ -254,23 +254,24 @@ section#hero {
     section#hero .navbar-fixed .brand-logo img {
       height: 30px;
       margin-top: 20px !important; }
-    section#hero .navbar-fixed li > a {
-      font-size: 14px;
-      font-weight: normal;
-      height: auto;
-      line-height: 0; }
+    section#hero .navbar-fixed li {
+      line-height: 5.9; }
+      section#hero .navbar-fixed li > a {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: inherit; }
   section#hero nav {
     position: absolute;
     background: transparent;
-    height: 50px !important;
     box-shadow: none;
+    overflow: hidden;
     /* Navegacion latera├▒*/ }
     section#hero nav .brand-logo img {
       height: 50px; }
     section#hero nav .button-collapse {
       padding-left: 0; }
     section#hero nav li {
-      height: 50px; }
+      line-height: 5; }
       section#hero nav li > a {
         color: #dcdcdc;
         font-size: 16px;
@@ -279,8 +280,6 @@ section#hero {
         text-transform: uppercase;
         font-weight: bold;
         padding: 0 0 0 40px;
-        height: 50px;
-        line-height: 4;
         /* Item active */ }
         section#hero nav li > a:hover {
           color: #ffffff;

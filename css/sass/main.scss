@@ -76,7 +76,7 @@ p {
     border: 2px solid #fff;
     border-radius: 5px;
     &:hover {
-        background-color: $color-cyan;
+        background-color: rgba(0, 148, 208, 0.85);
         border-color: $color-a-hover;
     }
 }
@@ -155,20 +155,20 @@ section#hero {
             margin-top: 20px !important;
         }
         li {
-            //height: 0;
+            line-height: 5.9;
             > a {
                 font-size: 14px;
                 font-weight: normal;
-                height: auto;
-                line-height: 0;
+                line-height: inherit;
             }   
         }
     }
     nav {
         position: absolute;
         background: transparent;
-        height: 50px !important;
+        //height: 100%;
         box-shadow: none;
+        overflow: hidden;
         .brand-logo {
             img {
                 height: 50px;
@@ -178,8 +178,7 @@ section#hero {
            padding-left: 0;
         }
         li {
-          height: 50px;
-          //line-height: 50px;
+          line-height: 5;
                 
             > a {
                 color: $color-text-nav;
@@ -189,8 +188,6 @@ section#hero {
                 text-transform: uppercase;
                 font-weight: bold; 
                 padding: 0 0 0 40px;
-                height: 50px;
-                line-height: 4;
                 &:hover {
                     color: $color-blanco;
                     background: transparent !important;
