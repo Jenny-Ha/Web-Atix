@@ -1,5 +1,22 @@
 'use strict';
 
+/* Added a preloader function */
+$(window).load(function() {
+    $('body').addClass('body-visible').fadeIn('slow');
+    $('.loader').fadeOut('slow');
+    
+    
+    /* Personalizar los elementos de Tipeo */
+    $(function(){
+        $(".type-it").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 75,
+            loop: true,
+            backDelay: 3000
+        });
+    });
+})  
+
 /* Para el menu scroll */
 var menu = document.getElementById('wrap_menu');
 var section = document.getElementById('nosotros');
@@ -28,29 +45,17 @@ window.addEventListener('scroll', function (e) {
     });    */
 });
 
-
-/* Added a preloader function */
-$(window).load(function() {
-    $('body').addClass('body-visible').fadeIn('slow');
-    $('.loader').fadeOut('slow');
-})  
-
 /* Funcion para mostrar menu en dispositivos pequeñños */
 $(".button-collapse").sideNav();
+
 /* Funcion para el scroll atraves de la pagina al hacer clic en el item del menu de navegacion */
 $('.scrollspy').scrollSpy();
+
 /* Modal */
     $('.modal-trigger').leanModal();
-/* Personalizar los elementos de Tipeo */
-$(function(){
-    $(".type-it").typed({
-        stringsElement: $('#typed-strings'),
-        typeSpeed: 75,
-        loop: true
-    });
-});
 
-/* Funcion para modales */
+
+/* Funcion para modales
 var links= $('#equipo .modal-trigger');
 links.click(function(e)
 {
@@ -59,3 +64,4 @@ links.click(function(e)
     var nueva = $(padre);
     console.log(nueva);
 }) 
+ */
