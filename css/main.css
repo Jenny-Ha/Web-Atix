@@ -341,7 +341,7 @@ section#nosotros {
     padding-bottom: 50px; }
     section#nosotros .mision-vision i {
       display: inline-block;
-      width: 44px;
+      width: 26px;
       height: 44px;
       background-image: url("../img/assetts/sprite_atix.png");
       background-repeat: no-repeat; }
@@ -370,7 +370,8 @@ section#nosotros {
     text-align: center;
     padding: 15px 20px; }
     section#nosotros .vision i {
-      background-position: -44px 1px; }
+      width: 44px;
+      background-position: -26px 1px; }
   section#nosotros #equipo {
     padding-top: 50px;
     padding-bottom: 20px; }
