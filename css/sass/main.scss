@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     
-    soutline: 1px solid rgba(0, 0, 255, 0.3);
+    outline: 1px solid rgba(0, 0, 255, 0.3);
 }
 //====== Utilitarios ======//
 @mixin clearfix() {
@@ -42,7 +42,15 @@ $color-bg-gris: rgb(241, 241, 241);
 $color-blanco: #ffffff;
 $color-text-gris: #666;
 $color-gris-claro: #999999;
-$color-text-nav: rgba(255, 255, 255, 0.85);
+$color-text-nav: #dcdcdc;
+
+$bg-tr-black:rgba(51,51,51,0.9);
+$bg-tr-brown:rgba(121,85,72,0.9);;
+$bg-tr-gray: rgba(170,170,170,0.9);
+$bg-tr-orange: rgba(255,141,25,0.9);;
+$bg-tr-sky:rgba(0, 153, 197, 0.9);
+$bg-tr-blue:rgba(0, 125, 218, 0.9);
+
 //========================//
 
 /* Estilos Globales*/
@@ -128,6 +136,7 @@ section#hero {
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
+    padding-bottom: 50px;
     #wrap_menu {
         padding-top: 20px;
     }
@@ -136,14 +145,23 @@ section#hero {
         position: fixed;
         padding-top: 0 !important;
         width: 100%;
-        height: 56px;
+        height: 70px;
         z-index: 998;
         position: fixed;
         background: $color-cyan;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         .brand-logo img {
-            height: 40px;
-            margin-top: 6px;
+            height: 30px;
+            margin-top: 20px !important;
+        }
+        li {
+            //height: 0;
+            > a {
+                font-size: 14px;
+                font-weight: normal;
+                height: auto;
+                line-height: 0;
+            }   
         }
     }
     nav {
@@ -153,7 +171,7 @@ section#hero {
         box-shadow: none;
         .brand-logo {
             img {
-                height: 47px;
+                height: 50px;
             }
         }
         .button-collapse {
@@ -162,39 +180,44 @@ section#hero {
         li {
           height: 50px;
           //line-height: 50px;
-        }       
-        a {
-            color: $color-text-nav;
-            font-size: 13px;
-            font-family: Gotham;
-            text-shadow: 1px 1px 1px #333;
-            text-transform: uppercase;
-            font-weight: bold; 
-            padding: 0 25px;
-            height: 50px;
-            line-height: 6;
-            &:hover {
+                
+            > a {
+                color: $color-text-nav;
+                font-size: 16px;
+                font-family: Gotham;
+                text-shadow: 1px 1px 1px #333;
+                text-transform: uppercase;
+                font-weight: bold; 
+                padding: 0 0 0 40px;
+                height: 50px;
+                line-height: 4;
+                &:hover {
+                    color: $color-blanco;
+                    background: transparent !important;
+                }
+                &.button-collapse {
+                i {
+                    line-height: 50px;
+                    color: $color-blanco;
+                }
+                }
+                /* Item active */
+                &.active {
                 color: $color-blanco;
-                background: transparent !important;
+                }
             }
-            &.button-collapse {
-              i {
-                line-height: 50px;
-                color: $color-blanco;
-              }
-            }
-            /* Item active */
-            &.active {
-               color: $color-blanco;
-            }
-        }
-        
+        } 
         /* Navegacion laterañ*/
         .side-nav {
             a {
                 text-shadow: none;
                 line-height: 4;
                 color: $color-text-gris;
+                font-weight: normal;
+                &:hover{
+                  background-color: lighten( $color-cyan, 5% ) !important;
+                  color: $color-blanco;
+                }
                 &.active {
                     background-color: $color-cyan !important;
                     color: $color-blanco;
@@ -215,7 +238,7 @@ section#hero {
         }
         span {
             font-family: "Gotham", "Roboto", sans-serif;
-            font-size: 2.85rem;
+            font-size: 3.34rem;
             font-weight: 600;
             position: relative;
             top: 35%;
@@ -231,11 +254,13 @@ section#hero {
         position: relative;
         width: auto;
         text-align: center;
-        bottom: 80px;
+        bottom: 55px;
         a {
             color: $color-blanco;
             text-shadow: 1px 1px 1px #333;
-            line-height: 2;
+            line-height: 1;
+            font-size: 16px;
+            padding: 10px 50px;
         }    
     }
 }
@@ -247,7 +272,7 @@ section#nosotros {
     .mision-vision{
         background-color: $color-cyan;
         color: $color-blanco;   
-        padding-top: 80px;
+        padding-top: 50px;
         @include pdb-50;
         
         i {
@@ -262,6 +287,9 @@ section#nosotros {
             font-size: 0.85rem;
             padding: 0 45px;
        }
+       h2 {
+            margin-bottom: 35px;
+       }
     }
     .mision {
        position: relative;
@@ -273,7 +301,7 @@ section#nosotros {
             position: absolute;
             bottom: 5%;
             right: -2.5px;
-            width: 5px;
+            width: 2px;
             height: 70%;
             background: #01aef8;
        }
@@ -332,6 +360,11 @@ section#nosotros {
                  border-radius: 50%;
                  overflow: hidden;
                  margin: 0 auto 10px;
+                 border: 2px solid #fff;
+                 transition:  all 0.15s ease-in-out;
+                 &:hover {
+                     border-color: $color-cyan;
+                 }
              }
              img {
                  width: 100%;
@@ -407,8 +440,7 @@ section#nosotros {
 /* Section servicios */
 section#servicios {
     background-color: $color-bg-gris;
-    padding-top: 80px;
-    @include pdb-50;
+    padding-top: 50px;
     .text-section {
         color: $color-cyan;
     }
@@ -420,6 +452,7 @@ section#servicios {
         padding: 0 10px; // alineado con ul.description
     }
     ul.list-servicios {
+        margin-bottom: 50px;
         > li {
             text-align: center;
             padding-top: 0.75rem;
@@ -457,15 +490,15 @@ section#servicios {
             }
         }
     }
-}
-/* Section Portafolio */
-section#portafolio {
     .introduccion {
         background-color: $color-cyan;
         color: $color-blanco;
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
+}
+/* Section Portafolio */
+section#portafolio {
     .galeria-trabajos {
         @include pdt-50;
         @include pdb-50;
@@ -493,7 +526,7 @@ section#portafolio {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,148,208,0.75);
+            //background-color: rgba(0,148,208,0.75);
             z-index: 2;
             transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);  
         }
@@ -523,11 +556,11 @@ section#portafolio {
         
         span {
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 10px;
             color: white;
             display: inline-block;
             border: 2px solid #fff;
-            border-radius: 6px;
+            border-radius: 4px;
             padding: 5px 10px;
             position: absolute;
             right: 10px;
@@ -537,29 +570,29 @@ section#portafolio {
         }
     }
     .view-img-01::before {
-        background-color: rgba(222, 15, 24, 0.75);
+        background-color: $bg-tr-black; 
     }
     .view-img-02::before {
-        background-color: rgba(0, 153, 197, 0.75);
+        background-color: $bg-tr-sky ;
     }
     .view-img-03::before {
-        background-color: rgba(0, 125, 218, 0.75);
+        background-color: $bg-tr-blue;
     }
     .view-img-04::before {
-        background-color: rgba(1, 218, 1, 0.75);
+        background-color: $bg-tr-brown;
     }
     .view-img-05::before {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: $bg-tr-gray;
     }
     .view-img-06::before {
-        background-color: rgba(3, 2, 0, 0.75);
+        background-color: $bg-tr-orange;
     }
 }
 /* Section contacto */
 section#contacto {
     background-color: $color-azul-osc;
     color: $color-blanco;
-    padding-top: 80px;
+    padding-top: 50px;
     @include pdb-50;
     .texto-gr {
         &::after {
@@ -610,7 +643,7 @@ section#contacto {
 footer {
     background-color: $color-cyan;
     color: $color-blanco-foo ;
-    padding: 20px 0 !important;
+    padding: 25px 0 !important;
     .copyright {
         font-size: 0.8rem;
         display: table;
@@ -655,6 +688,12 @@ footer {
                 background-position: -128px -44px;
                 &:hover{
                     background-position: -160px -44px;
+                }
+            }
+            &.snapchat {
+                background-position: -192px -44px;
+                &:hover{
+                    background-position: -224px -44px;
                 }
             }
         }
