@@ -10,7 +10,7 @@ $(window).load(function() {
     $(function(){
         $(".type-it").typed({
             stringsElement: $('#typed-strings'),
-            typeSpeed: 75,
+            typeSpeed: 100,
             loop: true,
             backDelay: 3000
         });

@@ -315,7 +315,8 @@ section#hero {
     bottom: 80px; }
     section#hero .wrapper-btn a {
       color: #ffffff;
-      text-shadow: 1px 1px 1px #333; }
+      text-shadow: 1px 1px 1px #333;
+      line-height: 2; }
 
 /* Section nosotros*/
 section#nosotros {
@@ -601,7 +602,8 @@ section#contacto {
       padding: 10px;
       overflow-y: auto !important; }
     section#contacto form button {
-      width: 160px; }
+      width: 160px;
+      line-height: 1; }
 
 /* Footer */
 footer {
