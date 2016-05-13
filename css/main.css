@@ -249,7 +249,7 @@ section#hero {
     height: 70px;
     z-index: 998;
     position: fixed;
-    background: #0094d0;
+    background: rgba(0, 148, 208, 0.9);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
     section#hero .navbar-fixed .brand-logo img {
       height: 30px;
